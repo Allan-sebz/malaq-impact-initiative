@@ -1,54 +1,91 @@
 <footer class="site-footer">
   <div class="container">
-    <div class="footer-grid">
+    <div class="footer-cta">
+      <h2 class="footer-cta__title">Everyone deserves to be <em>safe</em> online.</h2>
+      <div class="btn-group">
+        <a class="btn btn--teal" href="get-involved.html">
+          Get involved
+          <svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#arrow-right"></use></svg>
+        </a>
+        <a class="btn btn--outline-light" href="get-help.html">Get help</a>
+      </div>
+    </div>
+
+    <div class="footer-main">
       <div>
-        <h4>Malaq Impact Initiative</h4>
-        <p>
-          Ending technology-facilitated gender-based violence in Uganda: protecting survivors, empowering
-          women and girls to be safe online, and transforming the digital ecosystem to be more accountable.
+        <a class="brand brand--light" href="index.html" aria-label="Malaq Impact Initiative, home">
+          <svg class="brand__mark" viewBox="0 0 44 44" aria-hidden="true">
+            <rect width="44" height="44" rx="12" fill="#5c2d91" />
+            <path d="M12 31V14.5l10 10.5 10-10.5V31" fill="none" stroke="#ffffff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" />
+            <circle cx="35" cy="9" r="3" fill="#86d3d0" />
+          </svg>
+          <span class="brand__text">
+            <span class="brand__name">Malaq</span>
+            <span class="brand__sub">Impact Initiative</span>
+          </span>
+        </a>
+        <p class="footer-about">
+          Working to end technology-facilitated gender-based violence in Uganda through protection, empowerment and lasting systems change.
         </p>
-        <div class="social-row" aria-label="Social media links">
-          <a href="#" aria-label="Facebook" data-social-placeholder>f</a>
-          <a href="#" aria-label="Twitter / X" data-social-placeholder>x</a>
-          <a href="#" aria-label="Instagram" data-social-placeholder>ig</a>
-          <a href="#" aria-label="LinkedIn" data-social-placeholder>in</a>
+        <!-- TODO: replace each href="#" with the organisation's real social media profile URLs. -->
+        <div class="socials">
+          <a class="social" href="#" aria-label="Facebook"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#facebook"></use></svg></a>
+          <a class="social" href="#" aria-label="X"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#x-logo"></use></svg></a>
+          <a class="social" href="#" aria-label="Instagram"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#instagram"></use></svg></a>
+          <a class="social" href="#" aria-label="LinkedIn"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#linkedin"></use></svg></a>
+          <a class="social" href="#" aria-label="YouTube"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#youtube"></use></svg></a>
         </div>
-        <p class="placeholder-note">TODO: replace # links above with real social profiles.</p>
       </div>
 
       <div>
-        <h4>Explore</h4>
-        <ul>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="the-issue.html">The Issue</a></li>
-          <li><a href="digital-safety.html">Digital Safety Tips</a></li>
-          <li><a href="get-involved.html">Get Involved</a></li>
-          <li><a href="news.html">News</a></li>
+        <h2 class="footer__heading">Organisation</h2>
+        <ul class="footer__links">
+          <li><a class="footer__link" href="about.html">About us</a></li>
+          <li><a class="footer__link" href="the-issue.html">The issue</a></li>
+          <li><a class="footer__link" href="news.html">News and stories</a></li>
+          <li><a class="footer__link" href="get-involved.html">Get involved</a></li>
         </ul>
       </div>
 
       <div>
-        <h4>Support</h4>
-        <ul>
-          <li><a href="get-help.html">Get Help</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
-          <li><a href="privacy.html">Privacy Policy</a></li>
+        <h2 class="footer__heading">Support</h2>
+        <ul class="footer__links">
+          <li><a class="footer__link" href="get-help.html">Get help</a></li>
+          <li><a class="footer__link" href="digital-safety.html">Digital safety</a></li>
+          <li><a class="footer__link" href="contact.html">Contact us</a></li>
+          <li><a class="footer__link" href="privacy.html">Privacy policy</a></li>
         </ul>
       </div>
 
       <div>
-        <h4>Contact</h4>
-        <ul>
-          <li>Email: <span data-placeholder>info@[yourdomain].org (TBD)</span></li>
-          <li>Location: <span data-placeholder>Kampala, Uganda (TBD)</span></li>
+        <h2 class="footer__heading">Get in touch</h2>
+        <!-- TODO: add the organisation email once the domain is set up. -->
+        <ul class="footer__links">
+          <li class="footer__contact">
+            <svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#mail"></use></svg>
+            <span>Email address coming soon</span>
+          </li>
+          <li class="footer__contact">
+            <svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#map-pin"></use></svg>
+            <span>Uganda</span>
+          </li>
+          <li class="footer__contact">
+            <svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#message"></use></svg>
+            <a class="footer__link" href="contact.html">Send us a message</a>
+          </li>
         </ul>
-        <p class="placeholder-note">In immediate danger? Don't wait for a reply here. See the <a href="get-help.html">Get Help</a> page.</p>
       </div>
     </div>
 
     <div class="footer-bottom">
-      <span>© <span data-current-year>2026</span> Malaq Impact Initiative. All rights reserved.</span>
-      <span><a href="privacy.html">Privacy Policy</a></span>
+      <p>&copy; <span data-current-year>2026</span> Malaq Impact Initiative. All rights reserved.</p>
+      <p class="footer-safety">Press <kbd>Esc</kbd><kbd>Esc</kbd><kbd>Esc</kbd> to leave this site instantly</p>
     </div>
   </div>
+
+  <p class="footer-wordmark" aria-hidden="true">Malaq</p>
+
+  <button type="button" class="back-to-top" data-back-to-top aria-label="Back to top">
+    <svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#arrow-up"></use></svg>
+  </button>
 </footer>

@@ -2,138 +2,302 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://formspree.io; form-action 'self' https://formspree.io; base-uri 'self'; object-src 'none';" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://formspree.io; form-action 'self' https://formspree.io; base-uri 'self'; object-src 'none'; upgrade-insecure-requests" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
   <title>The Issue: What is TFGBV? | Malaq Impact Initiative</title>
-  <meta name="description" content="Understand technology-facilitated gender-based violence (TFGBV): its definition and the many forms it takes, from online harassment to AI deepfakes and digital stalking." />
+  <meta name="description" content="Understand technology-facilitated gender-based violence (TFGBV): what it is, the ten forms it commonly takes, the warning signs and the harm it causes." />
+  <meta name="theme-color" content="#1e1029" />
+  <meta property="og:site_name" content="Malaq Impact Initiative" />
+  <meta property="og:title" content="What is technology-facilitated gender-based violence?" />
+  <meta property="og:description" content="The definition, ten common forms, warning signs and impact of TFGBV." />
+  <meta property="og:type" content="article" />
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Manrope:wght@400;500;600;700;800&display=swap" />
   <link rel="stylesheet" href="assets/css/main.css" />
+  <script src="assets/js/boot.js"></script>
+  <script type="module" src="assets/js/main.js"></script>
 </head>
 <body>
-  <a href="#main-content" class="skip-link">Skip to main content</a>
-
+  <a class="skip-link" href="#main">Skip to main content</a>
   <div id="site-header"></div>
 
-  <main id="main-content">
+  <main id="main">
     <section class="page-hero">
       <div class="container">
-        <p class="page-hero__crumb"><a href="index.html">Home</a> / The Issue</p>
-        <h1>What is Technology-Facilitated Gender-Based Violence?</h1>
+        <ol class="breadcrumb" data-reveal>
+          <li><a class="breadcrumb__link" href="index.html">Home</a></li>
+          <li aria-current="page">The Issue</li>
+        </ol>
+        <h1 class="page-hero__title" data-reveal data-reveal-delay="1">Understanding technology-facilitated <em>violence</em></h1>
+        <p class="page-hero__lead" data-reveal data-reveal-delay="2">
+          Phones, apps and the internet have opened new doors for women and girls. They have also given abusers new ways to reach, watch and control them.
+        </p>
       </div>
     </section>
 
+    <!-- Definition -->
     <section class="section">
-      <div class="container">
-        <div class="grid grid--2 grid--align-start">
-          <div data-reveal>
-            <span class="eyebrow">Definition</span>
-            <h2>A simple definition</h2>
-            <p>
-              Technology-facilitated gender-based violence is any act of gender-based violence that
-              is committed, assisted, amplified, or enabled through digital technologies, the
-              internet, or electronic devices.
-            </p>
-            <p>
-              It is broader than simply "online abuse." The technology can be the tool used to commit
-              the violence, or it can make existing gender-based violence more severe.
-            </p>
-          </div>
-          <div class="callout" data-reveal>
-            <h3>Using technology or digital platforms to...</h3>
-            <p>Harm, threaten, control, sexually exploit, intimidate, or abuse someone because of their gender.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section--alt">
-      <div class="container">
-        <div class="section-head section-head--center">
-          <span class="eyebrow">Forms It Takes</span>
-          <h2>Ten common forms of TFGBV</h2>
-          <p>Select each item to learn more.</p>
-        </div>
-
-        <div data-accordion>
-          <div class="accordion-item">
-            <button type="button" class="accordion-trigger" aria-expanded="false">Online Harassment</button>
-            <div class="accordion-panel"><div class="accordion-panel__inner">Threatening or sexually harassing women and girls through WhatsApp, TikTok, Instagram, and other platforms.</div></div>
-          </div>
-          <div class="accordion-item">
-            <button type="button" class="accordion-trigger" aria-expanded="false">Sharing Intimate Images Without Consent</button>
-            <div class="accordion-panel"><div class="accordion-panel__inner">Distributing private intimate images or videos without consent, sometimes called "revenge porn."</div></div>
-          </div>
-          <div class="accordion-item">
-            <button type="button" class="accordion-trigger" aria-expanded="false">AI Deepfakes</button>
-            <div class="accordion-panel"><div class="accordion-panel__inner">Creating fake sexual images or videos of someone using AI and distributing them without consent.</div></div>
-          </div>
-          <div class="accordion-item">
-            <button type="button" class="accordion-trigger" aria-expanded="false">Digital Stalking</button>
-            <div class="accordion-panel"><div class="accordion-panel__inner">Tracking someone's location, monitoring their phone activity, or accessing their accounts without permission.</div></div>
-          </div>
-          <div class="accordion-item">
-            <button type="button" class="accordion-trigger" aria-expanded="false">Hacking and Account Takeover</button>
-            <div class="accordion-panel"><div class="accordion-panel__inner">Accessing someone's social media, email, or financial accounts to control or harm them.</div></div>
-          </div>
-          <div class="accordion-item">
-            <button type="button" class="accordion-trigger" aria-expanded="false">Cyberbullying and Threats</button>
-            <div class="accordion-panel"><div class="accordion-panel__inner">Repeated online abuse, especially threats of sexual violence or physical harm.</div></div>
-          </div>
-          <div class="accordion-item">
-            <button type="button" class="accordion-trigger" aria-expanded="false">Online Financial Abuse</button>
-            <div class="accordion-panel"><div class="accordion-panel__inner">Using digital banking, mobile money, or financial accounts to control or exploit someone.</div></div>
-          </div>
-          <div class="accordion-item">
-            <button type="button" class="accordion-trigger" aria-expanded="false">Doxxing</button>
-            <div class="accordion-panel"><div class="accordion-panel__inner">Publishing someone's private information online to intimidate or endanger them.</div></div>
-          </div>
-          <div class="accordion-item">
-            <button type="button" class="accordion-trigger" aria-expanded="false">Online Sexual Exploitation</button>
-            <div class="accordion-panel"><div class="accordion-panel__inner">Grooming, sextortion, or coercing girls and women into sending sexual material.</div></div>
-          </div>
-          <div class="accordion-item">
-            <button type="button" class="accordion-trigger" aria-expanded="false">Technology-Enabled Coercive Control</button>
-            <div class="accordion-panel"><div class="accordion-panel__inner">Using phones, GPS trackers, smart devices, passwords, or spyware to control a partner.</div></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container grid grid--2 grid--align-center">
-        <div class="img-placeholder img-placeholder--wide" data-reveal>
-          [Image placeholder: infographic or illustration summarizing the issue]
-        </div>
+      <div class="container split split--top">
         <div data-reveal>
-          <span class="eyebrow">Why It Matters</span>
-          <h2>The impact goes beyond the screen</h2>
-          <p>
-            TFGBV can cause lasting psychological harm, damage reputations and relationships, restrict
-            women's and girls' participation in education, work and public life, and in many cases,
-            escalate into physical danger. Because it happens through everyday tools like phones and
-            social media, it can feel inescapable and is often under-reported.
+          <p class="label">Definition</p>
+          <h2>What is TFGBV?</h2>
+          <p class="lead">
+            It is broader than "online abuse". Technology can be the weapon itself, or it can make violence that already exists more severe, more persistent and harder to escape.
           </p>
-          <a href="digital-safety.html" class="btn btn--outline">Learn how to stay safer online →</a>
+        </div>
+        <div class="definition" data-reveal data-reveal-delay="1">
+          <p class="definition__caption">In simple terms</p>
+          <p class="definition__quote">
+            Any act of gender-based violence that is <mark>committed, assisted, amplified or enabled</mark> through digital technologies, the internet or electronic devices.
+          </p>
+          <p class="definition__caption">Technology is used to</p>
+          <ul class="tag-list">
+            <li class="tag">Harm</li>
+            <li class="tag">Threaten</li>
+            <li class="tag">Control</li>
+            <li class="tag">Sexually exploit</li>
+            <li class="tag">Intimidate</li>
+            <li class="tag">Abuse</li>
+          </ul>
         </div>
       </div>
     </section>
 
-    <section class="section section--dark">
-      <div class="container text-center">
-        <h2>If this is happening to you or someone you know</h2>
-        <p class="hero__lead mx-auto">You are not alone, and support is available.</p>
-        <div class="hero__actions hero__actions--center">
-          <a href="get-help.html" class="btn btn--primary">Find Support</a>
+    <!-- Tool vs amplifier -->
+    <section class="section section--white">
+      <div class="container">
+        <div class="section-head section-head--center" data-reveal>
+          <p class="label">Two sides of the problem</p>
+          <h2>How technology is involved</h2>
+        </div>
+        <div class="grid grid--2">
+          <article class="card card--hover" data-reveal>
+            <span class="icon-badge"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#smartphone"></use></svg></span>
+            <h3>Technology as the weapon</h3>
+            <p>Some abuse only exists because of technology: a deepfake video, spyware hidden on a phone, or a hacked account used to impersonate someone.</p>
+          </article>
+          <article class="card card--hover" data-reveal data-reveal-delay="1">
+            <span class="icon-badge icon-badge--teal"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#share"></use></svg></span>
+            <h3>Technology as the amplifier</h3>
+            <p>Other abuse starts offline but grows online. Threats reach someone at any hour, humiliation spreads to thousands, and control follows them everywhere.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ten forms -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head section-head--split">
+          <div data-reveal>
+            <p class="label">Forms it takes</p>
+            <h2>Ten common forms of TFGBV</h2>
+          </div>
+          <p class="lead" data-reveal data-reveal-delay="1">
+            Select any form to read what it involves and the warning signs to look for.
+          </p>
+        </div>
+
+        <div class="accordion" data-accordion data-reveal>
+          <div class="accordion__item">
+            <button type="button" class="accordion__trigger">
+              <span class="accordion__num">01</span>
+              <span class="accordion__icon"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#message"></use></svg></span>
+              <span>Online harassment</span>
+              <span class="accordion__toggle"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#plus"></use></svg></span>
+            </button>
+            <div class="accordion__panel"><div class="accordion__panel-inner"><div class="accordion__content">
+              <p>Repeated unwanted contact, insults, threats or sexual comments sent through WhatsApp, TikTok, Instagram, comments or email. It often aims to shame, frighten or push women and girls out of online spaces.</p>
+              <p class="accordion__signs"><strong>Warning signs:</strong> messages from unknown or fake accounts, coordinated pile-ons, sexual comments on your posts.</p>
+            </div></div></div>
+          </div>
+
+          <div class="accordion__item">
+            <button type="button" class="accordion__trigger">
+              <span class="accordion__num">02</span>
+              <span class="accordion__icon"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#image"></use></svg></span>
+              <span>Sharing intimate images without consent</span>
+              <span class="accordion__toggle"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#plus"></use></svg></span>
+            </button>
+            <div class="accordion__panel"><div class="accordion__panel-inner"><div class="accordion__content">
+              <p>Sharing, or threatening to share, private sexual images or videos without the consent of the person shown. It is sometimes called "revenge porn", a term that wrongly suggests the survivor did something to deserve it.</p>
+              <p class="accordion__signs"><strong>Warning signs:</strong> threats to "expose" you, or images appearing in groups or on sites you never shared them with.</p>
+            </div></div></div>
+          </div>
+
+          <div class="accordion__item">
+            <button type="button" class="accordion__trigger">
+              <span class="accordion__num">03</span>
+              <span class="accordion__icon"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#video-off"></use></svg></span>
+              <span>AI deepfakes</span>
+              <span class="accordion__toggle"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#plus"></use></svg></span>
+            </button>
+            <div class="accordion__panel"><div class="accordion__panel-inner"><div class="accordion__content">
+              <p>Using artificial intelligence to create fake but realistic sexual images, videos or audio of a real person, then spreading them to humiliate, silence or blackmail her.</p>
+              <p class="accordion__signs"><strong>Warning signs:</strong> content showing you in situations that never happened, or odd blurring and distortion around faces.</p>
+            </div></div></div>
+          </div>
+
+          <div class="accordion__item">
+            <button type="button" class="accordion__trigger">
+              <span class="accordion__num">04</span>
+              <span class="accordion__icon"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#map-pin"></use></svg></span>
+              <span>Digital stalking</span>
+              <span class="accordion__toggle"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#plus"></use></svg></span>
+            </button>
+            <div class="accordion__panel"><div class="accordion__panel-inner"><div class="accordion__content">
+              <p>Monitoring someone's movements, messages or online activity without their knowledge, for example through shared location, hidden tracking apps or repeatedly checking their accounts.</p>
+              <p class="accordion__signs"><strong>Warning signs:</strong> someone knowing where you are or what you said in private, or unfamiliar apps and devices.</p>
+            </div></div></div>
+          </div>
+
+          <div class="accordion__item">
+            <button type="button" class="accordion__trigger">
+              <span class="accordion__num">05</span>
+              <span class="accordion__icon"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#key"></use></svg></span>
+              <span>Hacking and account takeover</span>
+              <span class="accordion__toggle"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#plus"></use></svg></span>
+            </button>
+            <div class="accordion__panel"><div class="accordion__panel-inner"><div class="accordion__content">
+              <p>Gaining access to someone's social media, email, mobile money or bank accounts to read private messages, impersonate them, lock them out or steal from them.</p>
+              <p class="accordion__signs"><strong>Warning signs:</strong> password reset messages you did not request, posts sent from your account, or logins you do not recognise.</p>
+            </div></div></div>
+          </div>
+
+          <div class="accordion__item">
+            <button type="button" class="accordion__trigger">
+              <span class="accordion__num">06</span>
+              <span class="accordion__icon"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#alert-octagon"></use></svg></span>
+              <span>Cyberbullying and threats</span>
+              <span class="accordion__toggle"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#plus"></use></svg></span>
+            </button>
+            <div class="accordion__panel"><div class="accordion__panel-inner"><div class="accordion__content">
+              <p>Sustained abuse, intimidation or threats, especially threats of sexual violence or physical harm, delivered through digital channels.</p>
+              <p class="accordion__signs"><strong>Warning signs:</strong> threatening messages, abusive posts about you, or others being encouraged to harm you.</p>
+            </div></div></div>
+          </div>
+
+          <div class="accordion__item">
+            <button type="button" class="accordion__trigger">
+              <span class="accordion__num">07</span>
+              <span class="accordion__icon"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#credit-card"></use></svg></span>
+              <span>Online financial abuse</span>
+              <span class="accordion__toggle"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#plus"></use></svg></span>
+            </button>
+            <div class="accordion__panel"><div class="accordion__panel-inner"><div class="accordion__content">
+              <p>Using digital banking, mobile money or financial apps to control, monitor or exploit someone, such as taking over their accounts or demanding access to their earnings.</p>
+              <p class="accordion__signs"><strong>Warning signs:</strong> being pressured to share PINs, money going missing, or a partner controlling every mobile money transaction.</p>
+            </div></div></div>
+          </div>
+
+          <div class="accordion__item">
+            <button type="button" class="accordion__trigger">
+              <span class="accordion__num">08</span>
+              <span class="accordion__icon"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#user-x"></use></svg></span>
+              <span>Doxxing</span>
+              <span class="accordion__toggle"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#plus"></use></svg></span>
+            </button>
+            <div class="accordion__panel"><div class="accordion__panel-inner"><div class="accordion__content">
+              <p>Publishing someone's private information, such as their home address, workplace, phone number or family details, to intimidate them or put them in danger.</p>
+              <p class="accordion__signs"><strong>Warning signs:</strong> your personal details posted publicly, or strangers contacting you or turning up where you go.</p>
+            </div></div></div>
+          </div>
+
+          <div class="accordion__item">
+            <button type="button" class="accordion__trigger">
+              <span class="accordion__num">09</span>
+              <span class="accordion__icon"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#shield-off"></use></svg></span>
+              <span>Online sexual exploitation</span>
+              <span class="accordion__toggle"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#plus"></use></svg></span>
+            </button>
+            <div class="accordion__panel"><div class="accordion__panel-inner"><div class="accordion__content">
+              <p>Grooming, sextortion or coercing women and girls into producing or sending sexual material, often by building false trust and then using threats or blackmail.</p>
+              <p class="accordion__signs"><strong>Warning signs:</strong> a new contact moving quickly to private chat, requests for images, or threats once an image has been shared.</p>
+            </div></div></div>
+          </div>
+
+          <div class="accordion__item">
+            <button type="button" class="accordion__trigger">
+              <span class="accordion__num">10</span>
+              <span class="accordion__icon"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#crosshair"></use></svg></span>
+              <span>Technology-enabled coercive control</span>
+              <span class="accordion__toggle"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#plus"></use></svg></span>
+            </button>
+            <div class="accordion__panel"><div class="accordion__panel-inner"><div class="accordion__content">
+              <p>Using phones, GPS trackers, smart devices, passwords or spyware to control a partner's behaviour, communication and freedom.</p>
+              <p class="accordion__signs"><strong>Warning signs:</strong> demands for your passwords, a partner checking your phone, or limits on who you can contact.</p>
+            </div></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Impact -->
+    <section class="section section--lilac">
+      <div class="container">
+        <div class="section-head section-head--split">
+          <div data-reveal>
+            <p class="label">Why it matters</p>
+            <h2>The harm goes far beyond the screen</h2>
+          </div>
+          <p class="lead" data-reveal data-reveal-delay="1">
+            Because it happens through everyday tools, technology-facilitated violence can feel inescapable. It is often under-reported and its effects are long lasting.
+          </p>
+        </div>
+        <div class="grid grid--4">
+          <article class="card" data-reveal>
+            <span class="icon-badge"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#activity"></use></svg></span>
+            <h3>Mental and emotional harm</h3>
+            <p>Fear, anxiety, shame and trauma that can last long after the abuse stops.</p>
+          </article>
+          <article class="card" data-reveal data-reveal-delay="1">
+            <span class="icon-badge"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#eye-off"></use></svg></span>
+            <h3>Silencing and isolation</h3>
+            <p>Many women and girls withdraw from online spaces, public debate and leadership.</p>
+          </article>
+          <article class="card" data-reveal data-reveal-delay="2">
+            <span class="icon-badge"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#briefcase"></use></svg></span>
+            <h3>Lost opportunities</h3>
+            <p>Abuse can disrupt education, damage reputations and cost people their livelihoods.</p>
+          </article>
+          <article class="card" data-reveal data-reveal-delay="3">
+            <span class="icon-badge"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#alert-triangle"></use></svg></span>
+            <h3>Physical danger</h3>
+            <p>Online threats, tracking and doxxing can escalate into violence offline.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Help band -->
+    <section class="section section--tight">
+      <div class="container">
+        <div class="help-band" data-reveal>
+          <div>
+            <p class="label label--light">If this is happening to you</p>
+            <h2>It is not your fault, and support is available.</h2>
+            <p>Find emergency contacts, support services and clear steps you can take right now.</p>
+            <div class="btn-group">
+              <a class="btn btn--white" href="get-help.html">
+                Find support
+                <svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#arrow-right"></use></svg>
+              </a>
+              <a class="btn btn--outline-light" href="digital-safety.html">Stay safer online</a>
+            </div>
+          </div>
+          <div class="help-band__aside">
+            <span class="icon-badge icon-badge--light"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#exit"></use></svg></span>
+            <h3>Leave this site quickly</h3>
+            <p>Press <kbd>Esc</kbd> three times, or use the red Quick exit button at the top of every page.</p>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
   <div id="site-footer"></div>
-
-  <script type="module" src="assets/js/main.js"></script>
 </body>
 </html>

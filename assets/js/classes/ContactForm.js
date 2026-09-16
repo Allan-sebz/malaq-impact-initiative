@@ -1,37 +1,33 @@
 /**
  * ContactForm
- * Submits a Formspree-backed form via fetch (AJAX) so the visitor stays
- * on the page, with basic client-side validation and an aria-live status
- * region. Spam protection is Formspree's built-in honeypot: a hidden
- * "_gotcha" field that, if filled by a bot, causes Formspree to silently
- * discard the submission.
+ * Submits a Formspree-backed form via fetch so the visitor stays on the
+ * page, with inline validation and an aria-live status message. Spam is
+ * filtered by Formspree's built-in "_gotcha" honeypot field.
  *
- * NOTE: the form's `action` attribute currently points to a placeholder
- * Formspree endpoint. See README.md for how to swap in the real one.
+ * The form's action is a placeholder until a real Formspree endpoint is
+ * added (see README.md).
  */
 export class ContactForm {
   constructor(form) {
     this.form = form;
     this.statusEl = form.querySelector("[data-form-status]");
     this.submitBtn = form.querySelector('button[type="submit"]');
+    this.submitLabel = form.querySelector("[data-submit-label]");
   }
 
   init() {
-    if (!this.form) return;
     this.form.addEventListener("submit", (event) => this.#handleSubmit(event));
+    this.form.addEventListener("input", (event) => event.target.removeAttribute("aria-invalid"));
+    this.form.addEventListener("change", (event) => event.target.removeAttribute("aria-invalid"));
   }
 
   async #handleSubmit(event) {
     event.preventDefault();
-
     if (!this.#validate()) return;
 
     const endpoint = this.form.getAttribute("action") || "";
     if (endpoint.includes("YOUR_FORM_ID")) {
-      this.#setStatus(
-        "error",
-        "This form isn't connected yet. Add your Formspree endpoint in contact.html (see README.md)."
-      );
+      this.#setStatus("error", "This form is not connected yet. Please try again soon.");
       return;
     }
 
@@ -44,52 +40,50 @@ export class ContactForm {
         body: new FormData(this.form),
       });
 
-      if (response.ok) {
-        this.#setStatus("success", "Thank you. Your message has been sent. We'll respond as soon as we can.");
-        this.form.reset();
-      } else {
-        this.#setStatus("error", "Something went wrong sending your message. Please try again in a moment.");
-      }
+      if (!response.ok) throw new Error(`Request failed: ${response.status}`);
+
+      this.form.reset();
+      this.#setStatus("success", "Thank you. Your message has been sent and we will respond as soon as we can.");
     } catch {
-      this.#setStatus("error", "Network error. Please check your connection and try again.");
+      this.#setStatus("error", "Your message could not be sent. Please check your connection and try again.");
     } finally {
       this.#setLoading(false);
     }
   }
 
   #validate() {
-    const requiredFields = this.form.querySelectorAll("[required]");
-    for (const field of requiredFields) {
-      if (!field.value.trim()) {
-        this.#setStatus("error", "Please fill in all required fields before sending.");
-        field.focus();
-        return false;
-      }
-    }
+    let firstInvalid = null;
 
-    const emailField = this.form.querySelector('input[type="email"]');
-    if (emailField && !this.#isValidEmail(emailField.value)) {
-      this.#setStatus("error", "Please enter a valid email address.");
-      emailField.focus();
-      return false;
-    }
+    this.form.querySelectorAll("[required]").forEach((field) => {
+      const isValid = field.type === "checkbox" ? field.checked : field.value.trim() !== "";
+      const isEmailValid = field.type !== "email" || /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(field.value.trim());
 
-    return true;
-  }
+      if (isValid && isEmailValid) return;
+      field.setAttribute("aria-invalid", "true");
+      firstInvalid ??= field;
+    });
 
-  #isValidEmail(value) {
-    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+    if (!firstInvalid) return true;
+
+    const message =
+      firstInvalid.type === "email" && firstInvalid.value.trim()
+        ? "Please enter a valid email address."
+        : "Please complete the highlighted fields before sending.";
+    this.#setStatus("error", message);
+    firstInvalid.focus();
+    return false;
   }
 
   #setStatus(state, message) {
     if (!this.statusEl) return;
-    this.statusEl.setAttribute("data-state", state);
+    this.statusEl.dataset.state = state;
     this.statusEl.textContent = message;
   }
 
   #setLoading(isLoading) {
     if (!this.submitBtn) return;
     this.submitBtn.disabled = isLoading;
-    this.submitBtn.textContent = isLoading ? "Sending…" : this.submitBtn.dataset.defaultLabel || "Send message";
+    this.submitBtn.classList.toggle("is-loading", isLoading);
+    if (this.submitLabel) this.submitLabel.textContent = isLoading ? "Sending" : "Send message";
   }
 }

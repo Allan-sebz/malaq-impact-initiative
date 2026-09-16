@@ -2,173 +2,207 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://formspree.io; form-action 'self' https://formspree.io; base-uri 'self'; object-src 'none';" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://formspree.io; form-action 'self' https://formspree.io; base-uri 'self'; object-src 'none'; upgrade-insecure-requests" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
   <title>About Us | Malaq Impact Initiative</title>
-  <meta name="description" content="Learn about Malaq Impact Initiative's mission, vision and three strategic pillars: Protect, Empower, Transform." />
+  <meta name="description" content="Learn about Malaq Impact Initiative: our mission, vision, values and the three strategic pillars guiding our work to end technology-facilitated gender-based violence in Uganda." />
+  <meta name="theme-color" content="#1e1029" />
+  <meta property="og:site_name" content="Malaq Impact Initiative" />
+  <meta property="og:title" content="About Malaq Impact Initiative" />
+  <meta property="og:description" content="Our mission, vision, values and strategic pillars." />
+  <meta property="og:type" content="website" />
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Manrope:wght@400;500;600;700;800&display=swap" />
   <link rel="stylesheet" href="assets/css/main.css" />
+  <script src="assets/js/boot.js"></script>
+  <script type="module" src="assets/js/main.js"></script>
 </head>
 <body>
-  <a href="#main-content" class="skip-link">Skip to main content</a>
-
+  <a class="skip-link" href="#main">Skip to main content</a>
   <div id="site-header"></div>
 
-  <main id="main-content">
+  <main id="main">
     <section class="page-hero">
       <div class="container">
-        <p class="page-hero__crumb"><a href="index.html">Home</a> / About Us</p>
-        <h1>About Malaq Impact Initiative</h1>
-        <p class="hero__lead text-muted">
-          Building a Uganda where women and girls can participate in digital life safely, freely and equally.
+        <ol class="breadcrumb" data-reveal>
+          <li><a class="breadcrumb__link" href="index.html">Home</a></li>
+          <li aria-current="page">About</li>
+        </ol>
+        <h1 class="page-hero__title" data-reveal data-reveal-delay="1">Safer digital lives for women and <em>girls</em></h1>
+        <p class="page-hero__lead" data-reveal data-reveal-delay="2">
+          Malaq Impact Initiative exists to end technology-facilitated gender-based violence in Uganda, and to make digital spaces safe, free and equal for everyone.
         </p>
       </div>
     </section>
 
-    <section class="section">
-      <div class="container grid grid--2 grid--align-center">
-        <div data-reveal>
-          <span class="eyebrow">Our Mission</span>
-          <h2>Why we exist</h2>
-          <p>
-            Our mission is to eliminate technology-facilitated gender-based violence in Uganda by
-            transforming how individuals, communities, institutions, governments and technology
-            companies prevent, detect and respond to digital harm, while empowering women and girls
-            to participate safely, freely and equally in Uganda's digital society.
-          </p>
-        </div>
-        <div class="img-placeholder img-placeholder--wide" data-reveal>
-          [Image placeholder: team photo, community engagement, or workshop]
-        </div>
-      </div>
-    </section>
-
-    <section class="section section--alt">
-      <div class="container grid grid--2 grid--align-center">
-        <div class="img-placeholder img-placeholder--wide" data-reveal>
-          [Image placeholder: illustrative graphic representing safety / digital rights]
-        </div>
-        <div data-reveal>
-          <span class="eyebrow">Our Vision</span>
-          <h2>The future we're working toward</h2>
-          <p>
-            A Uganda where every woman and girl can use technology and digital spaces freely, safely
-            and with dignity, free from online violence, exploitation and coercive control, and
-            supported by institutions and technology companies that are accountable and responsive.
-          </p>
-          <p class="placeholder-note">Draft vision statement. Feel free to refine to your exact wording.</p>
-        </div>
-      </div>
-    </section>
-
+    <!-- Mission -->
     <section class="section">
       <div class="container">
-        <div class="section-head section-head--center">
-          <span class="eyebrow">Our Approach</span>
-          <h2>Three Strategic Pillars</h2>
+        <p class="label" data-reveal>Our mission</p>
+        <p class="statement" data-reveal data-reveal-delay="1">
+          To eliminate technology-facilitated gender-based violence in Uganda by transforming how individuals, communities, institutions, governments and technology companies <mark>prevent, detect and respond</mark> to digital harm, while empowering women and girls to participate safely, freely and equally in Uganda's digital society.
+        </p>
+      </div>
+    </section>
+
+    <!-- Vision -->
+    <section class="section section--white">
+      <div class="container split">
+        <div class="media-stack" data-reveal>
+          <!-- Image placeholder: replace this .ph block with an <img> -->
+          <div class="ph ph--rounded">
+            <div class="ph__inner">
+              <svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#image"></use></svg>
+              <span>Image: the team or a community engagement session</span>
+            </div>
+          </div>
         </div>
-        <div class="grid grid--3">
-          <div class="pillar" data-reveal>
-            <div class="pillar__num">01</div>
-            <div class="pillar__title">Protect</div>
-            <p>
-              Prevent and respond to technology-facilitated GBV, provide survivor-centred support
-              services, and improve survivors' access to justice through partnerships with law
-              enforcement, legal aid and health services.
-            </p>
-          </div>
-          <div class="pillar" data-reveal>
-            <div class="pillar__num">02</div>
-            <div class="pillar__title">Empower</div>
-            <p>
-              Equip women and girls with digital-safety knowledge, tools and resources, from account
-              security to recognizing manipulation, so they can participate confidently and safely
-              online.
-            </p>
-          </div>
-          <div class="pillar" data-reveal>
-            <div class="pillar__num">03</div>
-            <div class="pillar__title">Transform</div>
-            <p>
-              Drive research, policy reform, institutional change and safer technology practices,
-              working with government and tech platforms to build a more accountable digital
-              ecosystem.
-            </p>
-          </div>
+        <div data-reveal data-reveal-delay="1">
+          <p class="label">Our vision</p>
+          <h2>A Uganda where every woman and girl is safe <em>online</em></h2>
+          <p class="lead">
+            We picture a Uganda where women and girls use technology and digital spaces freely, safely and with dignity, free from online violence, exploitation and coercive control.
+          </p>
+          <p>
+            In that future, survivors are believed and supported, perpetrators are held to account, and the institutions and technology companies that shape digital life are responsive to the people they serve.
+          </p>
         </div>
       </div>
     </section>
 
-    <section class="section section--alt">
+    <!-- Pillars -->
+    <section class="section">
       <div class="container">
-        <div class="section-head section-head--center">
-          <span class="eyebrow">What Guides Us</span>
-          <h2>Our Core Values</h2>
+        <div class="section-head section-head--split">
+          <div data-reveal>
+            <p class="label">How we work</p>
+            <h2>Three strategic pillars</h2>
+          </div>
+          <p class="lead" data-reveal data-reveal-delay="1">
+            Each pillar tackles a different part of the problem. Together they move from immediate support for survivors to long-term change in the systems around them.
+          </p>
         </div>
+
+        <div class="pillars">
+          <article class="pillar" data-reveal>
+            <span class="pillar__num">01</span>
+            <h3 class="pillar__title">Protect</h3>
+            <p class="pillar__text">Prevent and respond to technology-facilitated GBV, provide survivor-centred support and improve access to justice through partnerships with legal, health and law enforcement services.</p>
+            <span class="pillar__icon" aria-hidden="true"><svg class="icon"><use href="assets/icons/sprite.svg#shield-check"></use></svg></span>
+          </article>
+          <article class="pillar" data-reveal>
+            <span class="pillar__num">02</span>
+            <h3 class="pillar__title">Empower</h3>
+            <p class="pillar__text">Equip women and girls with digital-safety knowledge, tools and resources, from account security to spotting manipulation, so they can participate confidently and safely online.</p>
+            <span class="pillar__icon" aria-hidden="true"><svg class="icon"><use href="assets/icons/sprite.svg#unlock"></use></svg></span>
+          </article>
+          <article class="pillar" data-reveal>
+            <span class="pillar__num">03</span>
+            <h3 class="pillar__title">Transform</h3>
+            <p class="pillar__text">Drive research, policy reform, institutional change and safer technology practices, working with government and platforms to build a more accountable digital ecosystem.</p>
+            <span class="pillar__icon" aria-hidden="true"><svg class="icon"><use href="assets/icons/sprite.svg#refresh"></use></svg></span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Values -->
+    <section class="section section--lilac">
+      <div class="container">
+        <div class="section-head section-head--center" data-reveal>
+          <p class="label">What guides us</p>
+          <h2>Our values</h2>
+        </div>
+        <!-- Draft values: refine to match the organisation's agreed wording. -->
         <div class="grid grid--4">
-          <div class="card" data-reveal>
-            <h3>Survivor-Centred</h3>
+          <article class="card value-card" data-reveal>
+            <span class="card__index">01</span>
+            <span class="icon-badge"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#heart"></use></svg></span>
+            <h3>Survivor-centred</h3>
             <p>Every response starts with the safety, dignity and choices of the survivor.</p>
-          </div>
-          <div class="card" data-reveal>
-            <h3>Rights-Based</h3>
-            <p>We anchor our work in the right to a safe, free and equal digital life.</p>
-          </div>
-          <div class="card" data-reveal>
-            <h3>Evidence-Driven</h3>
-            <p>We ground our programs and advocacy in research and documented realities.</p>
-          </div>
-          <div class="card" data-reveal>
+          </article>
+          <article class="card value-card" data-reveal data-reveal-delay="1">
+            <span class="card__index">02</span>
+            <span class="icon-badge"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#shield"></use></svg></span>
+            <h3>Rights-based</h3>
+            <p>We anchor our work in every person's right to a safe, free and equal digital life.</p>
+          </article>
+          <article class="card value-card" data-reveal data-reveal-delay="2">
+            <span class="card__index">03</span>
+            <span class="icon-badge"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#search"></use></svg></span>
+            <h3>Evidence-driven</h3>
+            <p>Our programmes and advocacy are grounded in research and documented experience.</p>
+          </article>
+          <article class="card value-card" data-reveal data-reveal-delay="3">
+            <span class="card__index">04</span>
+            <span class="icon-badge"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#users"></use></svg></span>
             <h3>Collaborative</h3>
-            <p>We work with communities, government, and technology companies, not around them.</p>
-          </div>
+            <p>We work with communities, government and technology companies, not around them.</p>
+          </article>
         </div>
-        <p class="placeholder-note text-center mt-5">Draft values. Adjust to match your organization's real priorities.</p>
       </div>
     </section>
 
+    <!-- Who we work with -->
+    <section class="section section--white">
+      <div class="container">
+        <div class="section-head section-head--split">
+          <div data-reveal>
+            <p class="label">Who we work with</p>
+            <h2>Change needs everyone at the table</h2>
+          </div>
+          <p class="lead" data-reveal data-reveal-delay="1">
+            Digital harm does not stop at one door, so neither does our work. We engage every group that shapes how violence is prevented, noticed and answered.
+          </p>
+        </div>
+        <ul class="stakeholders">
+          <li class="stakeholder" data-reveal><span class="icon-badge icon-badge--sm"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#user"></use></svg></span>Individuals</li>
+          <li class="stakeholder" data-reveal data-reveal-delay="1"><span class="icon-badge icon-badge--sm"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#users"></use></svg></span>Communities</li>
+          <li class="stakeholder" data-reveal data-reveal-delay="2"><span class="icon-badge icon-badge--sm"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#book-open"></use></svg></span>Institutions</li>
+          <li class="stakeholder" data-reveal data-reveal-delay="3"><span class="icon-badge icon-badge--sm"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#landmark"></use></svg></span>Government</li>
+          <li class="stakeholder" data-reveal data-reveal-delay="4"><span class="icon-badge icon-badge--sm"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#monitor"></use></svg></span>Technology companies</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Team -->
     <section class="section">
       <div class="container">
-        <div class="section-head section-head--center">
-          <span class="eyebrow">Our People</span>
-          <h2>Meet the Team</h2>
+        <div class="section-head section-head--center" data-reveal>
+          <p class="label">Our people</p>
+          <h2>Meet the team</h2>
+          <p class="lead">The people behind Malaq Impact Initiative will be introduced here soon.</p>
         </div>
-        <div class="grid grid--3">
-          <div class="card text-center" data-reveal>
-            <div class="img-placeholder img-placeholder--square mb-4">[Photo]</div>
-            <h3>Team member name</h3>
-            <p class="placeholder-note">Role / title, coming soon</p>
-          </div>
-          <div class="card text-center" data-reveal>
-            <div class="img-placeholder img-placeholder--square mb-4">[Photo]</div>
-            <h3>Team member name</h3>
-            <p class="placeholder-note">Role / title, coming soon</p>
-          </div>
-          <div class="card text-center" data-reveal>
-            <div class="img-placeholder img-placeholder--square mb-4">[Photo]</div>
-            <h3>Team member name</h3>
-            <p class="placeholder-note">Role / title, coming soon</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section--dark">
-      <div class="container text-center">
-        <h2>Want to work with us?</h2>
-        <div class="hero__actions hero__actions--center">
-          <a href="get-involved.html" class="btn btn--primary">Get Involved</a>
-          <a href="contact.html" class="btn btn--outline">Contact Us</a>
+        <!-- TODO: replace placeholders with team member photos, names and roles. -->
+        <div class="grid grid--4 grid--team">
+          <article class="team-card" data-reveal>
+            <div class="ph ph--avatar"><div class="ph__inner"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#user"></use></svg><span>Team photo</span></div></div>
+            <h3>Name to be announced</h3>
+            <p>Role</p>
+          </article>
+          <article class="team-card" data-reveal data-reveal-delay="1">
+            <div class="ph ph--avatar"><div class="ph__inner"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#user"></use></svg><span>Team photo</span></div></div>
+            <h3>Name to be announced</h3>
+            <p>Role</p>
+          </article>
+          <article class="team-card" data-reveal data-reveal-delay="2">
+            <div class="ph ph--avatar"><div class="ph__inner"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#user"></use></svg><span>Team photo</span></div></div>
+            <h3>Name to be announced</h3>
+            <p>Role</p>
+          </article>
+          <article class="team-card" data-reveal data-reveal-delay="3">
+            <div class="ph ph--avatar"><div class="ph__inner"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#user"></use></svg><span>Team photo</span></div></div>
+            <h3>Name to be announced</h3>
+            <p>Role</p>
+          </article>
         </div>
       </div>
     </section>
   </main>
 
   <div id="site-footer"></div>
-
-  <script type="module" src="assets/js/main.js"></script>
 </body>
 </html>

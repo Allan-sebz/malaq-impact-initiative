@@ -2,95 +2,178 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://formspree.io; form-action 'self' https://formspree.io; base-uri 'self'; object-src 'none';" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://formspree.io; form-action 'self' https://formspree.io; base-uri 'self'; object-src 'none'; upgrade-insecure-requests" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
   <title>Get Help | Malaq Impact Initiative</title>
-  <meta name="description" content="Support resources for people experiencing technology-facilitated gender-based violence, including emergency contacts, evidence preservation steps and reporting guidance." />
+  <meta name="description" content="Support for anyone experiencing technology-facilitated gender-based violence in Uganda: emergency contacts, support services, next steps and safe browsing guidance." />
+  <meta name="theme-color" content="#1e1029" />
+  <meta property="og:site_name" content="Malaq Impact Initiative" />
+  <meta property="og:title" content="Get help | Malaq Impact Initiative" />
+  <meta property="og:description" content="Emergency contacts, support services and practical next steps." />
+  <meta property="og:type" content="website" />
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Manrope:wght@400;500;600;700;800&display=swap" />
   <link rel="stylesheet" href="assets/css/main.css" />
+  <script src="assets/js/boot.js"></script>
+  <script type="module" src="assets/js/main.js"></script>
 </head>
 <body>
-  <a href="#main-content" class="skip-link">Skip to main content</a>
-
+  <a class="skip-link" href="#main">Skip to main content</a>
   <div id="site-header"></div>
 
-  <main id="main-content">
+  <main id="main">
     <section class="page-hero">
-      <div class="container">
-        <p class="page-hero__crumb"><a href="index.html">Home</a> / Get Help</p>
-        <h1>Get Help</h1>
-        <p class="hero__lead text-muted">If you are experiencing technology-facilitated gender-based violence, support is available. You do not have to handle this alone.</p>
+      <div class="container page-hero__grid">
+        <div>
+          <ol class="breadcrumb" data-reveal>
+            <li><a class="breadcrumb__link" href="index.html">Home</a></li>
+            <li aria-current="page">Get Help</li>
+          </ol>
+          <h1 class="page-hero__title" data-reveal data-reveal-delay="1">You are not alone. Help is <em>available</em>.</h1>
+          <p class="page-hero__lead" data-reveal data-reveal-delay="2">
+            Whatever is happening to you online, it is not your fault. This page brings together emergency contacts, support services and clear steps you can take.
+          </p>
+        </div>
+
+        <aside class="urgent-card" data-reveal data-reveal-delay="3" aria-labelledby="urgent-title">
+          <div class="urgent-card__head">
+            <span class="icon-badge icon-badge--sm"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#alert-triangle"></use></svg></span>
+            <h2 id="urgent-title">In immediate danger?</h2>
+          </div>
+          <p>If you or someone else is at risk of physical harm, contact emergency services or the police straight away.</p>
+          <!-- TODO: insert the verified Uganda emergency number. -->
+          <p class="urgent-card__number">
+            <svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#phone"></use></svg>
+            Emergency number to be added
+          </p>
+        </aside>
       </div>
     </section>
 
-    <section class="section">
+    <!-- Safe browsing notice -->
+    <section class="section section--tight">
       <div class="container">
-        <div class="callout callout--urgent" data-reveal>
-          <h3>If you are in immediate physical danger</h3>
-          <p>Contact local emergency services or police right away. <span class="placeholder-note">[TODO: insert Uganda Police emergency line / local emergency number here.]</span></p>
+        <div class="notice" data-reveal>
+          <span class="icon-badge icon-badge--sm"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#eye-off"></use></svg></span>
+          <p><strong>Worried someone is watching your device?</strong> Use the red Quick exit button or press <kbd>Esc</kbd> three times to leave instantly. See <a href="#browse-safely">browsing safely</a> below for more tips.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Support services -->
+    <section class="section section--flush-top">
+      <div class="container">
+        <div class="section-head section-head--split">
+          <div data-reveal>
+            <p class="label">Support services</p>
+            <h2>Who you can contact</h2>
+          </div>
+          <p class="lead" data-reveal data-reveal-delay="1">
+            These services can listen, advise and help you decide what to do next. You stay in control of every decision.
+          </p>
         </div>
 
+        <!-- TODO: fill in verified contact details for each service before launch. -->
         <div class="grid grid--2">
-          <div class="card" data-reveal>
-            <h3>National GBV / Helpline</h3>
-            <p class="placeholder-note">[TODO: insert helpline name and phone number, e.g. a national GBV toll-free line.]</p>
-          </div>
-          <div class="card" data-reveal>
-            <h3>Police Child &amp; Family Protection Unit</h3>
-            <p class="placeholder-note">[TODO: insert contact details for the relevant police unit handling GBV/cybercrime.]</p>
-          </div>
-          <div class="card" data-reveal>
-            <h3>Legal Aid</h3>
-            <p class="placeholder-note">[TODO: insert legal aid organization(s) that can support survivors of TFGBV.]</p>
-          </div>
-          <div class="card" data-reveal>
-            <h3>Mental Health &amp; Counselling Support</h3>
-            <p class="placeholder-note">[TODO: insert counselling/mental health service contacts.]</p>
-          </div>
+          <article class="card resource" data-reveal>
+            <span class="icon-badge"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#phone"></use></svg></span>
+            <h3>National GBV helpline</h3>
+            <p>Confidential listening, advice and referrals for anyone affected by gender-based violence.</p>
+            <dl class="resource__details">
+              <div class="resource__row"><dt><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#phone"></use></svg>Phone</dt><dd>To be confirmed</dd></div>
+              <div class="resource__row"><dt><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#clock"></use></svg>Hours</dt><dd>To be confirmed</dd></div>
+            </dl>
+          </article>
+          <article class="card resource" data-reveal data-reveal-delay="1">
+            <span class="icon-badge"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#flag"></use></svg></span>
+            <h3>Police and cybercrime reporting</h3>
+            <p>Report threats, image-based abuse, hacking and other crimes committed through technology.</p>
+            <dl class="resource__details">
+              <div class="resource__row"><dt><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#phone"></use></svg>Phone</dt><dd>To be confirmed</dd></div>
+              <div class="resource__row"><dt><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#map-pin"></use></svg>Where</dt><dd>To be confirmed</dd></div>
+            </dl>
+          </article>
+          <article class="card resource" data-reveal>
+            <span class="icon-badge"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#briefcase"></use></svg></span>
+            <h3>Legal aid</h3>
+            <p>Free or low-cost legal advice on your rights, protection orders and taking a case forward.</p>
+            <dl class="resource__details">
+              <div class="resource__row"><dt><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#phone"></use></svg>Phone</dt><dd>To be confirmed</dd></div>
+              <div class="resource__row"><dt><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#globe"></use></svg>Website</dt><dd>To be confirmed</dd></div>
+            </dl>
+          </article>
+          <article class="card resource" data-reveal data-reveal-delay="1">
+            <span class="icon-badge"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#activity"></use></svg></span>
+            <h3>Counselling and psychosocial support</h3>
+            <p>Emotional support to help you cope with what has happened and begin to recover.</p>
+            <dl class="resource__details">
+              <div class="resource__row"><dt><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#phone"></use></svg>Phone</dt><dd>To be confirmed</dd></div>
+              <div class="resource__row"><dt><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#clock"></use></svg>Hours</dt><dd>To be confirmed</dd></div>
+            </dl>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="section section--alt">
+    <!-- Steps -->
+    <section class="section section--white">
+      <div class="container split split--top">
+        <div class="sticky-col" data-reveal>
+          <p class="label">Next steps</p>
+          <h2>What you can do right now</h2>
+          <p class="lead">You do not have to do everything at once. Take the steps that feel safe for you, in your own time.</p>
+          <a class="btn mt-lg" href="contact.html">
+            Contact our team
+            <svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#arrow-right"></use></svg>
+          </a>
+        </div>
+        <ol class="steps" data-reveal data-reveal-delay="1">
+          <li class="step"><div><h3>Make sure you are safe</h3><p>If you are in immediate danger, contact emergency services first. Your physical safety comes before anything else.</p></div></li>
+          <li class="step"><div><h3>Save the evidence</h3><p>Screenshot messages, posts and profiles, including usernames, dates and links. Store copies where the person harming you cannot reach them.</p></div></li>
+          <li class="step"><div><h3>Do not engage</h3><p>Avoid replying to or confronting the person. Engaging can escalate the abuse or be used against you.</p></div></li>
+          <li class="step"><div><h3>Report and block</h3><p>Use the platform's reporting tools for abusive content or accounts, and block the person once you have saved what you need.</p></div></li>
+          <li class="step"><div><h3>Reach out for support</h3><p>Talk to a helpline, a trusted person or our team. Support can help you plan what comes next.</p></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Browse safely -->
+    <section class="section" id="browse-safely">
       <div class="container">
-        <div class="section-head section-head--center">
-          <span class="eyebrow">Before You Act</span>
-          <h2>How to preserve evidence safely</h2>
+        <div class="section-head section-head--center" data-reveal>
+          <p class="label">Browsing safely</p>
+          <h2>Protect your privacy while you look for help</h2>
+          <p class="lead">If someone may check your phone or computer, these steps can reduce the chance they see what you have been reading.</p>
         </div>
-        <div class="grid grid--2 grid--align-start">
-          <ul class="list-check" data-reveal>
-            <li>Take screenshots of messages, posts, profiles and URLs, including dates and timestamps where visible.</li>
-            <li>Avoid replying to or engaging with the person harassing you. It can escalate the situation.</li>
-            <li>Do not delete the harmful content yet; save it first, even if it's distressing.</li>
-            <li>Use each platform's built-in "Report" feature to flag abusive content or accounts.</li>
-            <li>Block the person only after you've saved the evidence you need.</li>
-            <li>Adjust your account privacy and security settings. See our <a href="digital-safety.html">Digital Safety Tips</a>.</li>
-          </ul>
-          <div class="img-placeholder img-placeholder--wide" data-reveal>
-            [Image placeholder: step-by-step visual guide or supportive illustration]
-          </div>
+        <div class="grid grid--4">
+          <article class="card card--hover" data-reveal>
+            <span class="icon-badge icon-badge--teal"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#exit"></use></svg></span>
+            <h3>Use Quick exit</h3>
+            <p>The red button, or <kbd>Esc</kbd> three times, replaces this page with a neutral site.</p>
+          </article>
+          <article class="card card--hover" data-reveal data-reveal-delay="1">
+            <span class="icon-badge icon-badge--teal"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#eye-off"></use></svg></span>
+            <h3>Browse privately</h3>
+            <p>A private or incognito window does not save the pages you visit in your history.</p>
+          </article>
+          <article class="card card--hover" data-reveal data-reveal-delay="2">
+            <span class="icon-badge icon-badge--teal"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#trash"></use></svg></span>
+            <h3>Clear your history</h3>
+            <p>Remove individual pages rather than everything, as a fully empty history can raise suspicion.</p>
+          </article>
+          <article class="card card--hover" data-reveal data-reveal-delay="3">
+            <span class="icon-badge icon-badge--teal"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#monitor"></use></svg></span>
+            <h3>Use a safer device</h3>
+            <p>A trusted friend's phone or a public computer is harder for someone else to monitor.</p>
+          </article>
         </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container text-center">
-        <span class="eyebrow">Prefer to Reach Us Directly?</span>
-        <h2>Contact Malaq Impact Initiative</h2>
-        <p class="hero__lead mx-auto">
-          For general inquiries, guidance or referrals, reach out through our contact page. For
-          urgent safety concerns, please use the emergency contacts above first.
-        </p>
-        <a href="contact.html" class="btn btn--primary">Go to Contact Page</a>
       </div>
     </section>
   </main>
 
   <div id="site-footer"></div>
-
-  <script type="module" src="assets/js/main.js"></script>
 </body>
 </html>

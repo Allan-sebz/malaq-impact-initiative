@@ -2,96 +2,136 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://formspree.io; form-action 'self' https://formspree.io; base-uri 'self'; object-src 'none';" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://formspree.io; form-action 'self' https://formspree.io; base-uri 'self'; object-src 'none'; upgrade-insecure-requests" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
   <title>Contact Us | Malaq Impact Initiative</title>
-  <meta name="description" content="Get in touch with Malaq Impact Initiative for general inquiries, volunteering, partnerships or media requests." />
+  <meta name="description" content="Get in touch with Malaq Impact Initiative about general enquiries, volunteering, partnerships or media requests." />
+  <meta name="theme-color" content="#1e1029" />
+  <meta property="og:site_name" content="Malaq Impact Initiative" />
+  <meta property="og:title" content="Contact | Malaq Impact Initiative" />
+  <meta property="og:description" content="General enquiries, volunteering, partnerships and media." />
+  <meta property="og:type" content="website" />
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Manrope:wght@400;500;600;700;800&display=swap" />
   <link rel="stylesheet" href="assets/css/main.css" />
+  <script src="assets/js/boot.js"></script>
+  <script type="module" src="assets/js/main.js"></script>
 </head>
 <body>
-  <a href="#main-content" class="skip-link">Skip to main content</a>
-
+  <a class="skip-link" href="#main">Skip to main content</a>
   <div id="site-header"></div>
 
-  <main id="main-content">
+  <main id="main">
     <section class="page-hero">
       <div class="container">
-        <p class="page-hero__crumb"><a href="index.html">Home</a> / Contact</p>
-        <h1>Contact Us</h1>
-        <p class="hero__lead text-muted">Questions, volunteering, partnerships or media requests: we'd love to hear from you.</p>
+        <ol class="breadcrumb" data-reveal>
+          <li><a class="breadcrumb__link" href="index.html">Home</a></li>
+          <li aria-current="page">Contact</li>
+        </ol>
+        <h1 class="page-hero__title" data-reveal data-reveal-delay="1">Let's <em>talk</em></h1>
+        <p class="page-hero__lead" data-reveal data-reveal-delay="2">
+          Questions, volunteering, partnerships or media requests: we would love to hear from you.
+        </p>
       </div>
     </section>
 
     <section class="section">
-      <div class="container grid grid--2 grid--align-start">
+      <div class="container split split--top split--wide-right">
         <div data-reveal>
-          <div class="callout mb-6">
-            <h3>Not a crisis line</h3>
-            <p>This form is for general inquiries. If you're in immediate danger or need urgent support, please visit our <a href="get-help.html">Get Help</a> page instead of waiting for a reply here.</p>
-          </div>
+          <p class="label">Get in touch</p>
+          <h2>How to reach us</h2>
+          <p class="lead">Send us a message using the form and a member of our team will get back to you.</p>
 
+          <!-- TODO: add the organisation email and confirm the location once available. -->
+          <ul class="info-list">
+            <li class="info-item">
+              <span class="icon-badge icon-badge--sm"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#mail"></use></svg></span>
+              <span><span class="info-item__label">Email</span><span class="info-item__value">Coming soon</span></span>
+            </li>
+            <li class="info-item">
+              <span class="icon-badge icon-badge--sm"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#map-pin"></use></svg></span>
+              <span><span class="info-item__label">Location</span><span class="info-item__value">Uganda</span></span>
+            </li>
+            <li class="info-item">
+              <span class="icon-badge icon-badge--sm"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#share"></use></svg></span>
+              <span><span class="info-item__label">Social media</span><span class="info-item__value">Links coming soon</span></span>
+            </li>
+          </ul>
+
+          <div class="notice">
+            <span class="icon-badge icon-badge--sm"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#info"></use></svg></span>
+            <p><strong>This form is not a crisis line.</strong> If you are in danger or need urgent support, please visit <a href="get-help.html">Get help</a> instead of waiting for a reply.</p>
+          </div>
+        </div>
+
+        <div class="form-card" data-reveal data-reveal-delay="1">
+          <!-- TODO: replace YOUR_FORM_ID with the real Formspree form ID (see README.md). -->
           <form data-contact-form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
-            <!-- Honeypot: Formspree silently discards submissions where this hidden field is filled -->
             <div class="form-honeypot" aria-hidden="true">
               <label for="_gotcha">Leave this field empty</label>
               <input type="text" id="_gotcha" name="_gotcha" tabindex="-1" autocomplete="off" />
             </div>
 
-            <div class="form-field">
-              <label for="name">Full name</label>
-              <input type="text" id="name" name="name" required autocomplete="name" />
-            </div>
+            <div class="form-grid">
+              <div class="form-grid form-grid--2">
+                <div class="field">
+                  <label for="name">Full name</label>
+                  <input type="text" id="name" name="name" autocomplete="name" required />
+                </div>
+                <div class="field">
+                  <label for="email">Email address</label>
+                  <input type="email" id="email" name="email" autocomplete="email" required />
+                </div>
+              </div>
 
-            <div class="form-field">
-              <label for="email">Email address</label>
-              <input type="email" id="email" name="email" required autocomplete="email" />
-            </div>
+              <div class="form-grid form-grid--2">
+                <div class="field">
+                  <label for="organisation">Organisation <span class="field__optional">(optional)</span></label>
+                  <input type="text" id="organisation" name="organisation" autocomplete="organization" />
+                </div>
+                <div class="field">
+                  <label for="reason">Reason for contacting us</label>
+                  <select id="reason" name="reason">
+                    <option>General enquiry</option>
+                    <option>Volunteering</option>
+                    <option>Partnership</option>
+                    <option>Supporting our work</option>
+                    <option>Media and press</option>
+                    <option>Something else</option>
+                  </select>
+                </div>
+              </div>
 
-            <div class="form-field">
-              <label for="reason">Reason for contacting us</label>
-              <select id="reason" name="reason">
-                <option value="General inquiry">General inquiry</option>
-                <option value="Volunteering">Volunteering</option>
-                <option value="Partnership">Partnership</option>
-                <option value="Media / Press">Media / Press</option>
-                <option value="Other">Other</option>
-              </select>
-            </div>
+              <div class="field">
+                <label for="message">Your message</label>
+                <textarea id="message" name="message" required></textarea>
+              </div>
 
-            <div class="form-field">
-              <label for="message">Message</label>
-              <textarea id="message" name="message" required></textarea>
-            </div>
+              <label class="consent">
+                <input class="checkbox" type="checkbox" name="consent" value="yes" required />
+                <span>I agree that my details will be used to respond to my message, as described in the <a href="privacy.html">privacy policy</a>.</span>
+              </label>
 
-            <button type="submit" class="btn btn--primary btn--block" data-default-label="Send message">Send message</button>
+              <div class="form-footer">
+                <p>All fields are required unless marked optional.</p>
+                <button type="submit" class="btn">
+                  <span data-submit-label>Send message</span>
+                  <span class="spinner" aria-hidden="true"></span>
+                  <svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#arrow-right"></use></svg>
+                </button>
+              </div>
+            </div>
 
             <div class="form-status" data-form-status role="status" aria-live="polite"></div>
           </form>
-
-          <p class="placeholder-note mt-4">
-            TODO: replace <code>YOUR_FORM_ID</code> in this page's form action with your real Formspree
-            endpoint once your domain email (e.g. info@yourdomain.org) is set up. See README.md for steps.
-          </p>
-        </div>
-
-        <div data-reveal>
-          <div class="card">
-            <h3>Other ways to reach us</h3>
-            <p><strong>Email:</strong> <span class="placeholder-note">info@[yourdomain].org (TBD)</span></p>
-            <p><strong>Location:</strong> <span class="placeholder-note">Kampala, Uganda (TBD)</span></p>
-            <p><strong>Social media:</strong> <span class="placeholder-note">links coming soon</span></p>
-          </div>
         </div>
       </div>
     </section>
   </main>
 
   <div id="site-footer"></div>
-
-  <script type="module" src="assets/js/main.js"></script>
 </body>
 </html>

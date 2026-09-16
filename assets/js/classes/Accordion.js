@@ -1,39 +1,34 @@
 /**
  * Accordion
- * Progressive-enhancement expand/collapse for grouped [data-accordion-item]
- * elements. Only one panel open at a time within a given container.
+ * Expand/collapse for .accordion__item elements. Items open independently.
+ * Without JS every panel stays open (the collapsed styles are scoped to .js).
  */
 export class Accordion {
+  static #uid = 0;
+
   constructor(container) {
-    this.container = container;
-    this.items = Array.from(container.querySelectorAll(".accordion-item"));
+    this.items = Array.from(container.querySelectorAll(".accordion__item"));
   }
 
   init() {
     this.items.forEach((item) => {
-      const trigger = item.querySelector(".accordion-trigger");
-      const panel = item.querySelector(".accordion-panel");
+      const trigger = item.querySelector(".accordion__trigger");
+      const panel = item.querySelector(".accordion__panel");
       if (!trigger || !panel) return;
 
-      trigger.addEventListener("click", () => this.#toggle(item, panel));
+      Accordion.#uid += 1;
+      panel.id ||= `accordion-panel-${Accordion.#uid}`;
+      trigger.setAttribute("aria-controls", panel.id);
+      this.#setOpen(item, trigger, false);
+
+      trigger.addEventListener("click", () => {
+        this.#setOpen(item, trigger, item.dataset.open !== "true");
+      });
     });
   }
 
-  #toggle(item, panel) {
-    const isOpen = item.getAttribute("data-open") === "true";
-
-    this.items.forEach((other) => {
-      other.setAttribute("data-open", "false");
-      const otherPanel = other.querySelector(".accordion-panel");
-      const otherTrigger = other.querySelector(".accordion-trigger");
-      if (otherPanel) otherPanel.style.maxHeight = null;
-      if (otherTrigger) otherTrigger.setAttribute("aria-expanded", "false");
-    });
-
-    if (!isOpen) {
-      item.setAttribute("data-open", "true");
-      panel.style.maxHeight = `${panel.scrollHeight}px`;
-      item.querySelector(".accordion-trigger").setAttribute("aria-expanded", "true");
-    }
+  #setOpen(item, trigger, open) {
+    item.dataset.open = String(open);
+    trigger.setAttribute("aria-expanded", String(open));
   }
 }

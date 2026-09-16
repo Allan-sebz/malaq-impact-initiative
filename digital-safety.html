@@ -2,156 +2,242 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://formspree.io; form-action 'self' https://formspree.io; base-uri 'self'; object-src 'none';" />
-  <title>Digital Safety Tips | Malaq Impact Initiative</title>
-  <meta name="description" content="Practical digital safety tips: account security, recognizing deepfakes and phishing, protecting against stalkerware, and safe online habits." />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://formspree.io; form-action 'self' https://formspree.io; base-uri 'self'; object-src 'none'; upgrade-insecure-requests" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <title>Digital Safety | Malaq Impact Initiative</title>
+  <meta name="description" content="Practical digital safety guides for women and girls: securing accounts, privacy, devices and spyware, deepfakes, evidence and scams, plus an interactive safety check." />
+  <meta name="theme-color" content="#1e1029" />
+  <meta property="og:site_name" content="Malaq Impact Initiative" />
+  <meta property="og:title" content="Digital safety guides | Malaq Impact Initiative" />
+  <meta property="og:description" content="Practical steps to stay safer online, and a quick safety check." />
+  <meta property="og:type" content="website" />
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Manrope:wght@400;500;600;700;800&display=swap" />
   <link rel="stylesheet" href="assets/css/main.css" />
+  <script src="assets/js/boot.js"></script>
+  <script type="module" src="assets/js/main.js"></script>
 </head>
 <body>
-  <a href="#main-content" class="skip-link">Skip to main content</a>
-
+  <a class="skip-link" href="#main">Skip to main content</a>
   <div id="site-header"></div>
 
-  <main id="main-content">
+  <main id="main">
     <section class="page-hero">
       <div class="container">
-        <p class="page-hero__crumb"><a href="index.html">Home</a> / Digital Safety Tips</p>
-        <h1>Digital Safety Tips</h1>
-        <p class="hero__lead text-muted">Practical steps to help you, your family and your community stay safer online.</p>
+        <ol class="breadcrumb" data-reveal>
+          <li><a class="breadcrumb__link" href="index.html">Home</a></li>
+          <li aria-current="page">Digital Safety</li>
+        </ol>
+        <h1 class="page-hero__title" data-reveal data-reveal-delay="1">Practical steps to stay safer <em>online</em></h1>
+        <p class="page-hero__lead" data-reveal data-reveal-delay="2">
+          Clear, jargon-free guides to protect your accounts, devices and personal information, for you, your family and your community.
+        </p>
       </div>
     </section>
 
+    <!-- Guides -->
     <section class="section">
       <div class="container">
-        <div class="grid grid--3">
-          <div class="card" data-reveal>
-            <div class="card__icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
-                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
-              </svg>
-            </div>
-            <h3>Secure Your Accounts</h3>
-            <ul class="list-check">
-              <li>Turn on two-factor authentication (2FA) wherever available.</li>
-              <li>Use a unique, strong password for each account. Consider a password manager.</li>
-              <li>Review and remove devices/sessions you don't recognize in account settings.</li>
-            </ul>
+        <div class="section-head section-head--split">
+          <div data-reveal>
+            <p class="label">Safety guides</p>
+            <h2>Choose a topic</h2>
           </div>
-          <div class="card" data-reveal>
-            <div class="card__icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-                <circle cx="12" cy="12" r="3"></circle>
-              </svg>
-            </div>
-            <h3>Manage Your Privacy Settings</h3>
-            <ul class="list-check">
-              <li>Set social media profiles to private and review who can see your posts and location.</li>
-              <li>Turn off location sharing/tagging unless you need it.</li>
-              <li>Regularly review app permissions (camera, mic, contacts, location).</li>
-            </ul>
+          <p class="lead" data-reveal data-reveal-delay="1">Each guide gives you four practical steps you can start using today.</p>
+        </div>
+
+        <div data-tabs data-reveal>
+          <div class="tabs__list" role="tablist" aria-label="Safety guide topics">
+            <button type="button" class="tabs__tab" role="tab" id="tab-accounts" aria-controls="panel-accounts" aria-selected="true">
+              <svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#lock"></use></svg>Accounts
+            </button>
+            <button type="button" class="tabs__tab" role="tab" id="tab-privacy" aria-controls="panel-privacy" aria-selected="false">
+              <svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#eye"></use></svg>Privacy
+            </button>
+            <button type="button" class="tabs__tab" role="tab" id="tab-devices" aria-controls="panel-devices" aria-selected="false">
+              <svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#smartphone"></use></svg>Devices
+            </button>
+            <button type="button" class="tabs__tab" role="tab" id="tab-deepfakes" aria-controls="panel-deepfakes" aria-selected="false">
+              <svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#scan"></use></svg>Deepfakes
+            </button>
+            <button type="button" class="tabs__tab" role="tab" id="tab-evidence" aria-controls="panel-evidence" aria-selected="false">
+              <svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#file-text"></use></svg>Evidence
+            </button>
+            <button type="button" class="tabs__tab" role="tab" id="tab-scams" aria-controls="panel-scams" aria-selected="false">
+              <svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#alert-triangle"></use></svg>Scams
+            </button>
           </div>
-          <div class="card" data-reveal>
-            <div class="card__icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
-                <line x1="12" y1="9" x2="12" y2="13"></line>
-                <line x1="12" y1="17" x2="12.01" y2="17"></line>
-              </svg>
+
+          <div class="tabs__panel" role="tabpanel" id="panel-accounts" aria-labelledby="tab-accounts" tabindex="0">
+            <div class="guide">
+              <div>
+                <span class="icon-badge"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#lock"></use></svg></span>
+                <h3 class="guide__title">Secure your accounts</h3>
+                <p>Your email, social media and mobile money accounts hold your messages, contacts and money. Locking them down makes it much harder for anyone to take control.</p>
+              </div>
+              <ol class="tip-list">
+                <li><div><h4>Turn on two-step verification</h4><p>Add a second step, such as a code from an authenticator app, to email, social media and mobile money accounts.</p></div></li>
+                <li><div><h4>Use a different password everywhere</h4><p>Give every important account its own long password. A password manager can remember them for you.</p></div></li>
+                <li><div><h4>Check who is logged in</h4><p>Review active devices in your account settings and sign out of any you do not recognise.</p></div></li>
+                <li><div><h4>Secure your recovery options</h4><p>Make sure recovery emails and phone numbers belong only to you and are not shared with anyone else.</p></div></li>
+              </ol>
             </div>
-            <h3>Recognize Phishing &amp; Social Engineering</h3>
-            <ul class="list-check">
-              <li>Be cautious of unexpected links, urgent requests, or offers that feel too good to be true.</li>
-              <li>Verify requests for money or personal info through a separate, trusted channel.</li>
-              <li>Never share passwords or one-time codes with anyone.</li>
-            </ul>
           </div>
-          <div class="card" data-reveal>
-            <div class="card__icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M12 2l8 4v6c0 5-3.5 9-8 10-4.5-1-8-5-8-10V6l8-4z"></path>
-              </svg>
+
+          <div class="tabs__panel" role="tabpanel" id="panel-privacy" aria-labelledby="tab-privacy" tabindex="0">
+            <div class="guide">
+              <div>
+                <span class="icon-badge"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#eye"></use></svg></span>
+                <h3 class="guide__title">Manage your privacy</h3>
+                <p>The less someone can learn about your routine and location online, the harder it is for them to track, harass or find you.</p>
+              </div>
+              <ol class="tip-list">
+                <li><div><h4>Lock down your profiles</h4><p>Set social media accounts to private and review who can see your posts, friends list and photos.</p></div></li>
+                <li><div><h4>Switch off location sharing</h4><p>Turn off location tags on posts and review which apps and people can see where you are.</p></div></li>
+                <li><div><h4>Review app permissions</h4><p>Remove camera, microphone, contacts and location access from apps that do not need it.</p></div></li>
+                <li><div><h4>Think before you share</h4><p>Avoid posting details that reveal your routine, such as your school, workplace or regular locations.</p></div></li>
+              </ol>
             </div>
-            <h3>Protect Against Stalkerware</h3>
-            <ul class="list-check">
-              <li>Watch for unfamiliar apps, fast battery drain, or unusual data use.</li>
-              <li>Keep your device's operating system and apps updated.</li>
-              <li>Set a device passcode and avoid sharing it, even with a partner.</li>
-            </ul>
           </div>
-          <div class="card" data-reveal>
-            <div class="card__icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M3 7V5a2 2 0 0 1 2-2h2"></path>
-                <path d="M17 3h2a2 2 0 0 1 2 2v2"></path>
-                <path d="M21 17v2a2 2 0 0 1-2 2h-2"></path>
-                <path d="M7 21H5a2 2 0 0 1-2-2v-2"></path>
-                <circle cx="12" cy="12" r="3"></circle>
-              </svg>
+
+          <div class="tabs__panel" role="tabpanel" id="panel-devices" aria-labelledby="tab-devices" tabindex="0">
+            <div class="guide">
+              <div>
+                <span class="icon-badge"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#smartphone"></use></svg></span>
+                <h3 class="guide__title">Protect your devices</h3>
+                <p>Stalkerware and spyware can quietly share your messages, calls and location. These steps help you spot and prevent monitoring.</p>
+              </div>
+              <ol class="tip-list">
+                <li><div><h4>Lock your phone</h4><p>Use a PIN or passcode that only you know, and set the screen to lock automatically.</p></div></li>
+                <li><div><h4>Watch for warning signs</h4><p>Unknown apps, a battery that drains quickly or unusually high data use can signal monitoring software.</p></div></li>
+                <li><div><h4>Keep software updated</h4><p>Install system and app updates promptly. They often fix security weaknesses.</p></div></li>
+                <li><div><h4>Plan before removing spyware</h4><p>Removing monitoring software can alert the person who installed it. If you feel at risk, speak to a support service first.</p></div></li>
+              </ol>
             </div>
-            <h3>Be Deepfake-Aware</h3>
-            <ul class="list-check">
-              <li>Be skeptical of shocking images/videos. Check for visual inconsistencies.</li>
-              <li>Know that AI-generated content can look highly realistic; verify before you believe or share.</li>
-              <li>If targeted by a deepfake, save evidence and report it. See <a href="get-help.html">Get Help</a>.</li>
-            </ul>
           </div>
-          <div class="card" data-reveal>
-            <div class="card__icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                <polyline points="14 2 14 8 20 8"></polyline>
-                <line x1="16" y1="13" x2="8" y2="13"></line>
-                <line x1="16" y1="17" x2="8" y2="17"></line>
-              </svg>
+
+          <div class="tabs__panel" role="tabpanel" id="panel-deepfakes" aria-labelledby="tab-deepfakes" tabindex="0">
+            <div class="guide">
+              <div>
+                <span class="icon-badge"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#scan"></use></svg></span>
+                <h3 class="guide__title">Be deepfake aware</h3>
+                <p>AI can now create convincing fake images, videos and audio. Knowing how to question what you see protects you and the people around you.</p>
+              </div>
+              <ol class="tip-list">
+                <li><div><h4>Question shocking content</h4><p>Be sceptical of explicit or outrageous images and videos, especially when they appear suddenly.</p></div></li>
+                <li><div><h4>Look for inconsistencies</h4><p>Check for blurring around faces, unnatural lighting, mismatched skin tones or strange movement.</p></div></li>
+                <li><div><h4>Do not share it further</h4><p>Resharing, even to condemn it, spreads the harm. Report the content instead.</p></div></li>
+                <li><div><h4>If you are targeted</h4><p>Save evidence, report it to the platform and reach out for support. It is not your fault. <a href="get-help.html">Get help</a>.</p></div></li>
+              </ol>
             </div>
-            <h3>Document Safely</h3>
-            <ul class="list-check">
-              <li>Screenshot abusive content with dates/usernames visible before it's deleted.</li>
-              <li>Keep records in a place the abuser cannot access.</li>
-              <li>Use each platform's official reporting tools for harassment or non-consensual content.</li>
-            </ul>
+          </div>
+
+          <div class="tabs__panel" role="tabpanel" id="panel-evidence" aria-labelledby="tab-evidence" tabindex="0">
+            <div class="guide">
+              <div>
+                <span class="icon-badge"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#file-text"></use></svg></span>
+                <h3 class="guide__title">Document safely</h3>
+                <p>Good records make reporting to platforms, police or lawyers much easier. Collect them in a way that keeps you safe.</p>
+              </div>
+              <ol class="tip-list">
+                <li><div><h4>Capture everything</h4><p>Screenshot messages, posts, profiles and comments with usernames, dates and links visible.</p></div></li>
+                <li><div><h4>Keep a simple log</h4><p>Note the date, time, platform and what happened each time. Patterns help when you report.</p></div></li>
+                <li><div><h4>Store it securely</h4><p>Keep copies somewhere the person harming you cannot access, such as a trusted person's device.</p></div></li>
+                <li><div><h4>Save before you block</h4><p>Blocking or deleting can remove access to messages, so collect your evidence first.</p></div></li>
+              </ol>
+            </div>
+          </div>
+
+          <div class="tabs__panel" role="tabpanel" id="panel-scams" aria-labelledby="tab-scams" tabindex="0">
+            <div class="guide">
+              <div>
+                <span class="icon-badge"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#alert-triangle"></use></svg></span>
+                <h3 class="guide__title">Spot scams and manipulation</h3>
+                <p>Phishing and fake profiles are common ways abusers gain access to accounts or build false trust. Slow down and verify.</p>
+              </div>
+              <ol class="tip-list">
+                <li><div><h4>Pause before clicking</h4><p>Be wary of unexpected links, urgent requests or offers that seem too good to be true.</p></div></li>
+                <li><div><h4>Verify requests</h4><p>Confirm any request for money or personal details through a separate channel you trust.</p></div></li>
+                <li><div><h4>Never share codes</h4><p>No genuine company or bank will ask for your PIN, password or one-time code.</p></div></li>
+                <li><div><h4>Watch for fake profiles</h4><p>New accounts, stolen photos or pressure to move to private chat are warning signs.</p></div></li>
+              </ol>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section section--alt">
-      <div class="container grid grid--2 grid--align-center">
-        <div data-reveal>
-          <span class="eyebrow">For Parents &amp; Guardians</span>
-          <h2>Keeping girls safe online</h2>
-          <ul class="list-check">
-            <li>Have open, judgment-free conversations about online experiences.</li>
-            <li>Co-set privacy settings on new apps and devices together.</li>
-            <li>Know the reporting tools on the platforms your children use.</li>
-            <li>Teach that no one should ever ask them for private images or personal information.</li>
+    <!-- Safety check -->
+    <section class="section section--lilac">
+      <div class="container">
+        <div class="section-head section-head--center" data-reveal>
+          <p class="label">Interactive</p>
+          <h2>Quick digital safety check</h2>
+          <p class="lead">Tick the steps you have already taken. It takes under a minute and shows what to focus on next.</p>
+        </div>
+
+        <div class="checker" data-safety-check data-reveal>
+          <div class="checker__score">
+            <h3>Your progress</h3>
+            <div class="ring">
+              <svg viewBox="0 0 120 120" aria-hidden="true">
+                <circle class="ring__track" cx="60" cy="60" r="52" />
+                <circle class="ring__bar" cx="60" cy="60" r="52" data-check-ring />
+              </svg>
+              <span class="ring__value" data-check-value aria-live="polite">0/8</span>
+            </div>
+            <p class="checker__message" data-check-message aria-live="polite">Tick each step you have already taken to see where you stand.</p>
+            <button type="button" class="btn btn--outline-light btn--sm" data-check-reset>Start again</button>
+            <p class="checker__note">
+              <svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#lock"></use></svg>
+              Nothing you tick is saved or sent anywhere. Leaving the page clears it.
+            </p>
+          </div>
+
+          <ul class="check-list">
+            <li class="check-item"><label><input class="checkbox" type="checkbox" /> Two-step verification is on for my email and main social media accounts.</label></li>
+            <li class="check-item"><label><input class="checkbox" type="checkbox" /> I use a different password for each important account.</label></li>
+            <li class="check-item"><label><input class="checkbox" type="checkbox" /> My phone is protected by a PIN or passcode that only I know.</label></li>
+            <li class="check-item"><label><input class="checkbox" type="checkbox" /> I have checked which devices are logged into my accounts.</label></li>
+            <li class="check-item"><label><input class="checkbox" type="checkbox" /> My social media profiles are set to private.</label></li>
+            <li class="check-item"><label><input class="checkbox" type="checkbox" /> Location sharing is off for apps and people that do not need it.</label></li>
+            <li class="check-item"><label><input class="checkbox" type="checkbox" /> I have checked my phone for apps I do not recognise.</label></li>
+            <li class="check-item"><label><input class="checkbox" type="checkbox" /> I know how to save evidence safely if I ever need to.</label></li>
           </ul>
         </div>
-        <div class="img-placeholder img-placeholder--wide" data-reveal>
-          [Image placeholder: parent/child or community safety-training photo]
-        </div>
       </div>
     </section>
 
-    <section class="section section--dark">
-      <div class="container text-center">
-        <h2>Want to bring this training to your community?</h2>
-        <div class="hero__actions hero__actions--center">
-          <a href="get-involved.html" class="btn btn--primary">Partner With Us</a>
+    <!-- Parents -->
+    <section class="section section--white">
+      <div class="container split">
+        <div data-reveal>
+          <p class="label">For parents and guardians</p>
+          <h2>Helping girls stay safe online</h2>
+          <p class="lead">Young people are more likely to speak up when they know they will be listened to, not blamed.</p>
+          <ul class="list-check mt-lg">
+            <li>Talk openly and without judgement about what happens online.</li>
+            <li>Set up privacy settings together on new apps and devices.</li>
+            <li>Learn the reporting tools on the platforms your children use.</li>
+            <li>Make it clear that no one should ever ask them for private images.</li>
+          </ul>
+        </div>
+        <div class="media-stack" data-reveal data-reveal-delay="1">
+          <!-- Image placeholder: replace this .ph block with an <img> -->
+          <div class="ph ph--rounded">
+            <div class="ph__inner">
+              <svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#image"></use></svg>
+              <span>Image: a parent and daughter, or a digital-safety training session</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
   <div id="site-footer"></div>
-
-  <script type="module" src="assets/js/main.js"></script>
 </body>
 </html>

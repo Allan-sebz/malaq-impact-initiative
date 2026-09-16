@@ -2,169 +2,351 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://formspree.io; form-action 'self' https://formspree.io; base-uri 'self'; object-src 'none';" />
-  <title>Malaq Impact Initiative | Ending Technology-Facilitated Gender-Based Violence</title>
-  <meta name="description" content="Malaq Impact Initiative works to prevent, detect and respond to technology-facilitated gender-based violence (TFGBV) in Uganda, empowering women and girls to participate safely online." />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://formspree.io; form-action 'self' https://formspree.io; base-uri 'self'; object-src 'none'; upgrade-insecure-requests" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <title>Malaq Impact Initiative | Ending Technology-Facilitated Gender-Based Violence in Uganda</title>
+  <meta name="description" content="Malaq Impact Initiative works to end technology-facilitated gender-based violence in Uganda, supporting survivors and helping women and girls take part in digital life safely, freely and equally." />
+  <meta name="theme-color" content="#1e1029" />
+  <meta property="og:site_name" content="Malaq Impact Initiative" />
   <meta property="og:title" content="Malaq Impact Initiative" />
   <meta property="og:description" content="Ending technology-facilitated gender-based violence in Uganda." />
   <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary" />
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Manrope:wght@400;500;600;700;800&display=swap" />
   <link rel="stylesheet" href="assets/css/main.css" />
+  <script src="assets/js/boot.js"></script>
+  <script type="module" src="assets/js/main.js"></script>
 </head>
 <body>
-  <a href="#main-content" class="skip-link">Skip to main content</a>
-
+  <a class="skip-link" href="#main">Skip to main content</a>
   <div id="site-header"></div>
 
-  <main id="main-content">
+  <main id="main">
+    <!-- Hero -->
     <section class="hero">
-      <div class="container">
+      <div class="container hero__grid">
         <div>
-          <span class="eyebrow">Malaq Impact Initiative</span>
-          <h1>Ending Technology-Facilitated Gender-Based Violence in Uganda</h1>
-          <p class="hero__lead">
-            We work to transform how individuals, communities, institutions, governments and technology
-            companies prevent, detect and respond to digital harm, while empowering women and girls to
-            participate safely, freely and equally in Uganda's digital society.
+          <p class="hero__eyebrow" data-reveal>
+            <span class="pulse-dot" aria-hidden="true"></span>
+            Digital safety, dignity and justice in Uganda
           </p>
-          <div class="hero__actions">
-            <a href="the-issue.html" class="btn btn--primary">Learn About TFGBV</a>
-            <a href="get-help.html" class="btn btn--outline">Get Help Now</a>
+          <h1 class="hero__title" data-reveal data-reveal-delay="1">
+            <span>Malaq</span>
+            <span><em>Impact</em> Initiative</span>
+          </h1>
+          <p class="hero__tagline" data-reveal data-reveal-delay="2">Ending technology-facilitated gender-based violence in Uganda.</p>
+          <p class="hero__text" data-reveal data-reveal-delay="2">
+            We are changing how individuals, communities, institutions, governments and technology companies prevent, detect and respond to digital harm, so that women and girls can take part in Uganda's digital society safely, freely and equally.
+          </p>
+          <div class="btn-group" data-reveal data-reveal-delay="3">
+            <a class="btn btn--teal" href="the-issue.html">
+              Understand TFGBV
+              <svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#arrow-right"></use></svg>
+            </a>
+            <a class="btn btn--outline-light" href="get-help.html">Get help now</a>
           </div>
+          <ul class="hero__points" data-reveal data-reveal-delay="4">
+            <li><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#check"></use></svg>Survivor-centred</li>
+            <li><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#check"></use></svg>Rights-based</li>
+            <li><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#check"></use></svg>Evidence-driven</li>
+          </ul>
         </div>
-        <div class="img-placeholder img-placeholder--tall" data-reveal>
-          [Image placeholder: hero photo, e.g. women/girls safely using phones or laptops, a community workshop]
+
+        <div class="hero__visual" data-reveal data-reveal-delay="2">
+          <div class="hero__frame">
+            <!-- Image placeholder: replace this .ph block with an <img> -->
+            <div class="ph ph--dark">
+              <div class="ph__inner">
+                <svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#image"></use></svg>
+                <span>Hero image: women and girls using technology with confidence</span>
+              </div>
+            </div>
+          </div>
+          <a class="float-card float-card--help" href="get-help.html">
+            <span class="float-card__icon"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#life-buoy"></use></svg></span>
+            <span><strong>Need support?</strong>Find help and next steps</span>
+            <svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#arrow-right"></use></svg>
+          </a>
+          <div class="float-card float-card--exit" aria-hidden="true">
+            <span class="keys"><kbd>Esc</kbd><kbd>Esc</kbd><kbd>Esc</kbd></span>
+            <span>Leaves this site instantly</span>
+          </div>
         </div>
       </div>
     </section>
 
+    <!-- Marquee -->
+    <div class="marquee">
+      <div class="marquee__track">
+        <ul class="marquee__group">
+          <li class="marquee__item">Online harassment</li>
+          <li class="marquee__item">Non-consensual image sharing</li>
+          <li class="marquee__item">AI deepfakes</li>
+          <li class="marquee__item">Digital stalking</li>
+          <li class="marquee__item">Account takeover</li>
+          <li class="marquee__item">Cyberbullying and threats</li>
+          <li class="marquee__item">Online financial abuse</li>
+          <li class="marquee__item">Doxxing</li>
+          <li class="marquee__item">Sextortion and grooming</li>
+          <li class="marquee__item">Coercive control</li>
+        </ul>
+        <ul class="marquee__group" aria-hidden="true">
+          <li class="marquee__item">Online harassment</li>
+          <li class="marquee__item">Non-consensual image sharing</li>
+          <li class="marquee__item">AI deepfakes</li>
+          <li class="marquee__item">Digital stalking</li>
+          <li class="marquee__item">Account takeover</li>
+          <li class="marquee__item">Cyberbullying and threats</li>
+          <li class="marquee__item">Online financial abuse</li>
+          <li class="marquee__item">Doxxing</li>
+          <li class="marquee__item">Sextortion and grooming</li>
+          <li class="marquee__item">Coercive control</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- The issue -->
     <section class="section">
       <div class="container">
-        <div class="section-head section-head--center">
-          <span class="eyebrow">The Problem</span>
-          <h2>Digital spaces are not yet safe and equal spaces</h2>
-          <p>
-            Technology-facilitated gender-based violence is any act of gender-based violence that is
-            committed, assisted, amplified, or enabled through digital technologies, the internet, or
-            electronic devices. It is broader than "online abuse": technology can be the tool used to
-            commit the violence, or it can make existing gender-based violence more severe.
-          </p>
+        <div class="split split--top">
+          <div data-reveal>
+            <p class="label">The issue</p>
+            <h2>Technology has changed how gender-based violence <em>happens</em>.</h2>
+          </div>
+          <div data-reveal data-reveal-delay="1">
+            <p class="lead">
+              Technology-facilitated gender-based violence (TFGBV) is any act of gender-based violence that is committed, assisted, amplified or enabled through digital technologies, the internet or electronic devices.
+            </p>
+            <p>
+              It is broader than "online abuse". Technology can be the tool used to commit violence, or it can make existing violence more severe, following survivors from their phones into their homes, schools and workplaces.
+            </p>
+            <a class="link-arrow" href="the-issue.html">
+              Read the full explainer
+              <svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#arrow-right"></use></svg>
+            </a>
+          </div>
         </div>
 
-        <div class="grid grid--4" data-reveal>
-          <div class="stat">
-            <span class="stat__value">[X]%</span>
-            <span class="stat__label placeholder-note">Insert a sourced statistic (e.g. share of women who have experienced online harassment)</span>
+        <!-- TODO: once sourced impact data is available, swap these for real statistics (update data-count) and cite the sources. -->
+        <div class="stats">
+          <div data-reveal>
+            <span class="stat__num" data-count="10" data-pad="2">10</span>
+            <p class="stat__label">Recognised forms of technology-facilitated violence we work to prevent and respond to</p>
           </div>
-          <div class="stat">
-            <span class="stat__value">[X]%</span>
-            <span class="stat__label placeholder-note">Insert a sourced statistic</span>
+          <div data-reveal data-reveal-delay="1">
+            <span class="stat__num" data-count="5" data-pad="2">05</span>
+            <p class="stat__label">Groups we engage: individuals, communities, institutions, government and technology companies</p>
           </div>
-          <div class="stat">
-            <span class="stat__value">[X]</span>
-            <span class="stat__label placeholder-note">Insert a sourced statistic (e.g. cases reported/supported)</span>
-          </div>
-          <div class="stat">
-            <span class="stat__value">[X]</span>
-            <span class="stat__label placeholder-note">Insert a sourced statistic</span>
+          <div data-reveal data-reveal-delay="2">
+            <span class="stat__num" data-count="3" data-pad="2">03</span>
+            <p class="stat__label">Strategic pillars guiding everything we do: protect, empower and transform</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section section--alt">
+    <!-- Pillars -->
+    <section class="section section--white">
       <div class="container">
-        <div class="section-head section-head--center">
-          <span class="eyebrow">Our Approach</span>
-          <h2>Three Strategic Pillars</h2>
+        <div class="section-head section-head--split">
+          <div data-reveal>
+            <p class="label">Our approach</p>
+            <h2>Three strategic pillars</h2>
+          </div>
+          <p class="lead" data-reveal data-reveal-delay="1">
+            Lasting change takes more than awareness. We work across the whole response: supporting survivors today, equipping women and girls for tomorrow, and fixing the systems that allow digital harm to continue.
+          </p>
+        </div>
+
+        <div class="pillars">
+          <article class="pillar" data-reveal>
+            <span class="pillar__num">01</span>
+            <h3 class="pillar__title">Protect</h3>
+            <p class="pillar__text">Prevent and respond to technology-facilitated GBV, provide survivor-centred support and improve access to justice.</p>
+            <span class="pillar__icon" aria-hidden="true"><svg class="icon"><use href="assets/icons/sprite.svg#shield-check"></use></svg></span>
+          </article>
+          <article class="pillar" data-reveal>
+            <span class="pillar__num">02</span>
+            <h3 class="pillar__title">Empower</h3>
+            <p class="pillar__text">Equip women and girls with digital-safety knowledge, tools and resources to participate confidently and safely online.</p>
+            <span class="pillar__icon" aria-hidden="true"><svg class="icon"><use href="assets/icons/sprite.svg#unlock"></use></svg></span>
+          </article>
+          <article class="pillar" data-reveal>
+            <span class="pillar__num">03</span>
+            <h3 class="pillar__title">Transform</h3>
+            <p class="pillar__text">Drive research, policy reform, institutional change and safer technology practices to create a more accountable digital ecosystem.</p>
+            <span class="pillar__icon" aria-hidden="true"><svg class="icon"><use href="assets/icons/sprite.svg#refresh"></use></svg></span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Forms of TFGBV -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head section-head--split">
+          <div data-reveal>
+            <p class="label">Know the signs</p>
+            <h2>What technology-facilitated violence can look like</h2>
+          </div>
+          <p class="lead" data-reveal data-reveal-delay="1">
+            Digital abuse is often dismissed as "just online". It is not. Recognising it is the first step towards stopping it.
+          </p>
+        </div>
+
+        <div class="bento">
+          <a class="tile tile--feature" href="the-issue.html" data-reveal>
+            <span class="tile__big" aria-hidden="true">10</span>
+            <div>
+              <h3>Ten forms of technology-facilitated violence, explained</h3>
+              <p>From online harassment to spyware and sextortion, learn how each form works and the warning signs to look for.</p>
+              <span class="link-arrow link-arrow--light">
+                Explore all ten
+                <svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#arrow-right"></use></svg>
+              </span>
+            </div>
+          </a>
+          <article class="tile" data-reveal data-reveal-delay="1">
+            <span class="tile__icon"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#message"></use></svg></span>
+            <div><h3>Online harassment</h3><p>Threats and sexual harassment through WhatsApp, TikTok, Instagram and other platforms.</p></div>
+          </article>
+          <article class="tile" data-reveal data-reveal-delay="2">
+            <span class="tile__icon"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#image"></use></svg></span>
+            <div><h3>Image-based abuse</h3><p>Sharing, or threatening to share, intimate images or videos without consent.</p></div>
+          </article>
+          <article class="tile" data-reveal data-reveal-delay="1">
+            <span class="tile__icon"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#video-off"></use></svg></span>
+            <div><h3>AI deepfakes</h3><p>Fake sexual images or videos made with AI and spread to shame or silence.</p></div>
+          </article>
+          <article class="tile" data-reveal data-reveal-delay="2">
+            <span class="tile__icon"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#map-pin"></use></svg></span>
+            <div><h3>Digital stalking</h3><p>Tracking location, monitoring phones or secretly accessing accounts.</p></div>
+          </article>
+          <article class="tile" data-reveal data-reveal-delay="1">
+            <span class="tile__icon"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#key"></use></svg></span>
+            <div><h3>Account takeover</h3><p>Hacking social media, email or mobile money accounts to control or harm.</p></div>
+          </article>
+          <article class="tile" data-reveal data-reveal-delay="2">
+            <span class="tile__icon"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#user-x"></use></svg></span>
+            <div><h3>Doxxing</h3><p>Publishing private information to intimidate someone or put them in danger.</p></div>
+          </article>
+          <article class="tile" data-reveal data-reveal-delay="3">
+            <span class="tile__icon"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#shield-off"></use></svg></span>
+            <div><h3>Sextortion and grooming</h3><p>Coercing women and girls into sending sexual material, often through threats.</p></div>
+          </article>
+          <article class="tile" data-reveal data-reveal-delay="4">
+            <span class="tile__icon"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#crosshair"></use></svg></span>
+            <div><h3>Coercive control</h3><p>Using phones, trackers, passwords or spyware to control a partner.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Support -->
+    <section class="section section--lilac">
+      <div class="container split">
+        <div class="media-stack" data-reveal>
+          <!-- Image placeholder: replace this .ph block with an <img> -->
+          <div class="ph ph--rounded">
+            <div class="ph__inner">
+              <svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#image"></use></svg>
+              <span>Image: a supportive conversation or community session</span>
+            </div>
+          </div>
+          <div class="media-stack__badge">
+            <span class="icon-badge icon-badge--sm icon-badge--light"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#lock"></use></svg></span>
+            <span><strong>Confidential by default</strong>Your privacy and choices come first.</span>
+          </div>
+        </div>
+
+        <div data-reveal data-reveal-delay="1">
+          <p class="label">Survivor-centred support</p>
+          <h2>Support that starts with your safety and your choices</h2>
+          <p class="lead">No one should face digital abuse alone. We work alongside survivors and trusted partners so that every response respects dignity, privacy and consent.</p>
+          <ul class="feature-list">
+            <li>
+              <span class="icon-badge icon-badge--sm icon-badge--teal"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#file-text"></use></svg></span>
+              <div><h3>Documenting evidence safely</h3><p>Guidance on capturing and storing proof without putting yourself at further risk.</p></div>
+            </li>
+            <li>
+              <span class="icon-badge icon-badge--sm icon-badge--teal"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#life-buoy"></use></svg></span>
+              <div><h3>Referrals to trusted services</h3><p>Connecting survivors with legal aid, health and psychosocial support.</p></div>
+            </li>
+            <li>
+              <span class="icon-badge icon-badge--sm icon-badge--teal"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#shield-check"></use></svg></span>
+              <div><h3>Digital security help</h3><p>Practical steps to secure accounts, devices and personal information.</p></div>
+            </li>
+          </ul>
+          <a class="btn" href="get-help.html">
+            Explore support options
+            <svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#arrow-right"></use></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Help band -->
+    <section class="section section--tight">
+      <div class="container">
+        <div class="help-band" data-reveal>
+          <div>
+            <p class="label label--light">You are not alone</p>
+            <h2>If this is happening to you, help is available.</h2>
+            <p>Whatever you are experiencing online, it is not your fault. Find emergency contacts, support services and practical next steps.</p>
+            <div class="btn-group">
+              <a class="btn btn--white" href="get-help.html">
+                Get help
+                <svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#arrow-right"></use></svg>
+              </a>
+              <a class="btn btn--outline-light" href="digital-safety.html">Digital safety tips</a>
+            </div>
+          </div>
+          <div class="help-band__aside">
+            <span class="icon-badge icon-badge--light"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#exit"></use></svg></span>
+            <h3>Leave this site quickly</h3>
+            <p>Press <kbd>Esc</kbd> three times, or use the red Quick exit button at the top of every page.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Get involved -->
+    <section class="section section--white">
+      <div class="container">
+        <div class="section-head section-head--center" data-reveal>
+          <p class="label">Get involved</p>
+          <h2>Help build a safer digital Uganda</h2>
+          <p class="lead">There is a role for everyone, whether you bring an hour, a skill or an organisation.</p>
         </div>
 
         <div class="grid grid--3">
-          <div class="pillar" data-reveal>
-            <div class="pillar__num">01</div>
-            <div class="pillar__title">Protect</div>
-            <p>Prevent and respond to technology-facilitated GBV, provide survivor-centred support, and improve access to justice.</p>
-          </div>
-          <div class="pillar" data-reveal>
-            <div class="pillar__num">02</div>
-            <div class="pillar__title">Empower</div>
-            <p>Equip women and girls with digital-safety knowledge, tools and resources to participate confidently and safely online.</p>
-          </div>
-          <div class="pillar" data-reveal>
-            <div class="pillar__num">03</div>
-            <div class="pillar__title">Transform</div>
-            <p>Drive research, policy reform, institutional change and safer technology practices to create a more accountable digital ecosystem.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <div class="section-head section-head--center">
-          <span class="eyebrow">Know the Signs</span>
-          <h2>What TFGBV can look like</h2>
-        </div>
-        <div class="grid grid--3">
-          <div class="card" data-reveal>
-            <div class="card__icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-              </svg>
-            </div>
-            <h3>Online Harassment</h3>
-            <p>Threatening or sexually harassing messages on WhatsApp, TikTok, Instagram and other platforms.</p>
-          </div>
-          <div class="card" data-reveal>
-            <div class="card__icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M23 7l-7 5 7 5V7z"></path>
-                <rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect>
-                <line x1="1" y1="1" x2="23" y2="23"></line>
-              </svg>
-            </div>
-            <h3>AI Deepfakes</h3>
-            <p>Fake sexual images or videos created and distributed without consent.</p>
-          </div>
-          <div class="card" data-reveal>
-            <div class="card__icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                <circle cx="12" cy="10" r="3"></circle>
-              </svg>
-            </div>
-            <h3>Digital Stalking &amp; Coercive Control</h3>
-            <p>Tracking someone's location, monitoring their phone, or using spyware to control a partner.</p>
-          </div>
-        </div>
-        <p class="text-center mt-6">
-          <a href="the-issue.html" class="btn btn--outline">See all forms of TFGBV →</a>
-        </p>
-      </div>
-    </section>
-
-    <section class="section section--dark">
-      <div class="container text-center">
-        <span class="eyebrow">Join Us</span>
-        <h2>Help build a safer digital society</h2>
-        <p class="hero__lead mx-auto">
-          Whether you volunteer, partner with us, or simply spread awareness, you can help protect
-          women and girls online.
-        </p>
-        <div class="hero__actions hero__actions--center">
-          <a href="get-involved.html" class="btn btn--primary">Get Involved</a>
-          <a href="contact.html" class="btn btn--outline">Contact Us</a>
+          <a class="path-card" href="get-involved.html#volunteer" data-reveal>
+            <span class="icon-badge"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#users"></use></svg></span>
+            <h3>Volunteer</h3>
+            <p>Share your skills in community outreach, digital-safety training, research or communications.</p>
+            <span class="link-arrow">Become a volunteer <svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#arrow-right"></use></svg></span>
+          </a>
+          <a class="path-card" href="get-involved.html#partner" data-reveal data-reveal-delay="1">
+            <span class="icon-badge"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#landmark"></use></svg></span>
+            <h3>Partner with us</h3>
+            <p>Collaborate as a community group, institution, government body or technology company.</p>
+            <span class="link-arrow">Explore partnerships <svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#arrow-right"></use></svg></span>
+          </a>
+          <a class="path-card" href="get-involved.html#donate" data-reveal data-reveal-delay="2">
+            <span class="icon-badge"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#heart"></use></svg></span>
+            <h3>Support our work</h3>
+            <p>Help fund survivor support, digital-safety training and research that drives change.</p>
+            <span class="link-arrow">Ways to give <svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#arrow-right"></use></svg></span>
+          </a>
         </div>
       </div>
     </section>
   </main>
 
   <div id="site-footer"></div>
-
-  <script type="module" src="assets/js/main.js"></script>
 </body>
 </html>

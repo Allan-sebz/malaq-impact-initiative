@@ -1,38 +1,65 @@
-<header class="site-header">
-  <div class="container">
-    <a href="index.html" class="brand">
-      <span class="brand__mark" aria-hidden="true">M</span>
-      <span>Malaq Impact Initiative</span>
+<header class="site-header" data-menu-open="false">
+  <div class="container site-header__inner">
+    <a class="brand" href="index.html" aria-label="Malaq Impact Initiative, home">
+      <svg class="brand__mark" viewBox="0 0 44 44" aria-hidden="true">
+        <rect width="44" height="44" rx="12" fill="#3b1f5c" />
+        <path d="M12 31V14.5l10 10.5 10-10.5V31" fill="none" stroke="#ffffff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" />
+        <circle cx="35" cy="9" r="3" fill="#86d3d0" />
+      </svg>
+      <span class="brand__text">
+        <span class="brand__name">Malaq</span>
+        <span class="brand__sub">Impact Initiative</span>
+      </span>
     </a>
 
-    <nav class="nav" data-open="false" aria-label="Primary">
+    <nav class="nav" aria-label="Primary">
       <ul class="nav__list">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="the-issue.html">The Issue</a></li>
-        <li><a href="get-help.html">Get Help</a></li>
-        <li><a href="digital-safety.html">Digital Safety</a></li>
-        <li><a href="get-involved.html">Get Involved</a></li>
-        <li><a href="news.html">News</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a class="nav__link" href="index.html">Home</a></li>
+        <li><a class="nav__link" href="about.html">About</a></li>
+        <li><a class="nav__link" href="the-issue.html">The Issue</a></li>
+        <li><a class="nav__link" href="digital-safety.html">Digital Safety</a></li>
+        <li><a class="nav__link" href="get-involved.html">Get Involved</a></li>
+        <li><a class="nav__link" href="news.html">News</a></li>
+        <li><a class="nav__link" href="contact.html">Contact</a></li>
       </ul>
-
-      <button type="button" class="nav__toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-nav">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-          <line x1="3" y1="6" x2="21" y2="6"></line>
-          <line x1="3" y1="12" x2="21" y2="12"></line>
-          <line x1="3" y1="18" x2="21" y2="18"></line>
-        </svg>
-      </button>
     </nav>
 
-    <button type="button" class="quick-exit" data-quick-exit title="Immediately leave this site (or press Escape 3 times)">
-      <svg class="quick-exit__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
-        <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
-        <polyline points="16 17 21 12 16 7"></polyline>
-        <line x1="21" y1="12" x2="9" y2="12"></line>
-      </svg>
-      Quick Exit
-    </button>
+    <div class="header-actions">
+      <a class="btn btn--sm btn--outline header-help" href="get-help.html">Get help</a>
+      <button type="button" class="quick-exit" data-quick-exit aria-label="Quick exit: leave this site immediately">
+        <svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#exit"></use></svg>
+        <span class="quick-exit__full">Quick exit</span>
+        <span class="quick-exit__short">Exit</span>
+      </button>
+      <button type="button" class="nav-toggle" aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu">
+        <span class="nav-toggle__bars" aria-hidden="true"><span></span><span></span><span></span></span>
+      </button>
+    </div>
+  </div>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <div class="container mobile-menu__inner">
+      <nav aria-label="Mobile">
+        <ul class="mobile-menu__list">
+          <li><a class="mobile-menu__link" href="index.html">Home</a></li>
+          <li><a class="mobile-menu__link" href="about.html">About</a></li>
+          <li><a class="mobile-menu__link" href="the-issue.html">The Issue</a></li>
+          <li><a class="mobile-menu__link" href="get-help.html">Get Help</a></li>
+          <li><a class="mobile-menu__link" href="digital-safety.html">Digital Safety</a></li>
+          <li><a class="mobile-menu__link" href="get-involved.html">Get Involved</a></li>
+          <li><a class="mobile-menu__link" href="news.html">News</a></li>
+          <li><a class="mobile-menu__link" href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="mobile-menu__foot">
+        <p class="mobile-menu__title">Need support right now?</p>
+        <p>If you are in immediate danger, contact emergency services. You can leave this site at any time with Quick exit, or by pressing Esc three times.</p>
+        <a class="btn btn--teal btn--sm" href="get-help.html">
+          Find help
+          <svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#arrow-right"></use></svg>
+        </a>
+      </div>
+    </div>
   </div>
 </header>

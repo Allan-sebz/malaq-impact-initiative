@@ -9,31 +9,46 @@ database) so it can be hosted directly on GitHub Pages.
 ## Project structure
 
 ```
-index.html            Home
-about.html             About Us (mission, pillars, team)
-the-issue.html          What is TFGBV
-get-help.html           Support resources
-digital-safety.html     Digital safety tips
-get-involved.html       Volunteer / partner / donate
-news.html                News & stories (placeholder)
+index.html              Home
+about.html              Mission, vision, pillars, values, team
+the-issue.html          What TFGBV is, ten forms, impact
+get-help.html           Emergency card, support services, next steps, safe browsing
+digital-safety.html     Tabbed safety guides and an interactive safety check
+get-involved.html       Volunteer, partner, support
+news.html               News and stories (placeholders)
 contact.html            Contact form (Formspree)
-privacy.html            Privacy policy
-404.html                 Not found page
+privacy.html            Privacy policy with a live table of contents
+404.html                Not found page
 
 partials/
-  header.html            Shared nav, injected into every page
-  footer.html            Shared footer, injected into every page
+  header.html           Shared header, desktop nav and mobile menu
+  footer.html           Shared footer
 
 assets/
-  css/main.css           Design system + all site styles
-  js/main.js              App entry point
-  js/classes/             Navigation, QuickExit, RevealOnScroll,
-                           Accordion, ContactForm, PartialLoader
+  css/main.css          Design system and all styles (tokens at the top)
+  icons/sprite.svg      Every icon on the site, referenced with <use>
+  js/boot.js            Tiny script that enables JS-only styles before paint
+  js/main.js            App entry point
+  js/classes/           One class per behaviour: PartialLoader, Navigation,
+                        QuickExit, RevealOnScroll, CounterGroup, Accordion,
+                        Tabs, SafetyChecklist, ScrollSpy, BackToTop, ContactForm
   favicon.svg
 ```
 
 Each page loads `partials/header.html` and `partials/footer.html` at runtime via
-`fetch()`, so the nav/footer only need to be edited in one place.
+`fetch()`, so the header and footer only need to be edited in one place.
+
+## Design system
+
+- **Colours** are CSS variables at the top of `assets/css/main.css`: deep plum
+  and purple for identity, teal for safety and action, a warm cream background
+  and an apricot highlight used sparingly.
+- **Type** pairs Fraunces (display headings) with Manrope (body and interface).
+- **Icons** live in `assets/icons/sprite.svg`. To use one:
+  `<svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#lock"></use></svg>`.
+- **Layout** is mobile first and tested at phone (360px), tablet (768px) and
+  desktop (1280px+) widths. The full navigation appears from 1180px; below
+  that the menu button opens a full-screen menu.
 
 ## Running locally
 
@@ -53,11 +68,13 @@ Then open `http://localhost:8000`.
 
 ## Things you still need to fill in
 
-Search the codebase for `TODO` / `[TODO` / `placeholder-note` to find every
-spot marked for your input. In summary:
+Search the codebase for `TODO` and `Image placeholder` to find every spot
+marked for your input. In summary:
 
-1. **Images**: every `.img-placeholder` box is a labeled empty slot. Replace
-   it with an `<img>` tag once you have real photos/graphics.
+1. **Images**: every `.ph` block is a labelled empty slot. Replace the whole
+   block with an `<img>` tag (with meaningful `alt` text) once you have real
+   photos, for example
+   `<img src="assets/images/hero.jpg" alt="Young women at a digital safety workshop" />`.
 2. **Contact form endpoint** (`contact.html`): currently points to
    `https://formspree.io/f/YOUR_FORM_ID`. Once you have your domain email
    (e.g. `info@yourdomain.org`):
@@ -71,12 +88,16 @@ spot marked for your input. In summary:
 3. **Get Help hotlines** (`get-help.html`): placeholder boxes for the
    national GBV helpline, police contact, legal aid and counselling services.
    Please verify these with a live source before publishing.
-4. **Contact/footer details**: email and location are marked "(TBD)" in
+   The emergency number in the red card at the top also needs adding.
+4. **Contact details**: email is marked "coming soon" in
    `partials/footer.html` and `contact.html`.
 5. **Social media links**: placeholder `#` links in `partials/footer.html`.
 6. **Team section** (`about.html`): placeholder cards, ready for names/photos.
-7. **Homepage statistics**: placeholder `[X]%` figures, replace with real,
-   sourced numbers (and consider citing the source).
+7. **Homepage figures**: the animated numbers currently show real facts from
+   the site (10 forms, 5 stakeholder groups, 3 pillars). When you have sourced
+   impact data, change the text and the `data-count` value together.
+8. **Donations** (`get-involved.html`): link the button to a giving page once
+   one exists.
 
 ## Attaching your custom domain
 
@@ -121,8 +142,8 @@ for this repo specifically once you're ready to use the NGO's real domain.
 
 ## The "Quick Exit" safety feature
 
-A red **Quick Exit** button appears in the header on every page. Clicking it
-(or pressing `Escape` three times quickly) immediately redirects to
+A red **Quick exit** button appears in the header on every page. Clicking it
+(or pressing `Escape` three times quickly) hides the page instantly and redirects to
 `https://www.google.com` and *replaces* the current history entry, so the
 back button won't return to this site. This is standard practice on
 GBV-support websites. You can change the destination URL by editing
