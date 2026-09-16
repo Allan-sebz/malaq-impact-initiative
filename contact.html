@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://formspree.io; form-action 'self' https://formspree.io; base-uri 'self'; object-src 'none';" />
+  <title>Contact Us — Malaq Impact Initiative</title>
+  <meta name="description" content="Get in touch with Malaq Impact Initiative for general inquiries, volunteering, partnerships or media requests." />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <div id="site-header"></div>
+
+  <main id="main-content">
+    <section class="page-hero">
+      <div class="container">
+        <p class="page-hero__crumb"><a href="index.html">Home</a> / Contact</p>
+        <h1>Contact Us</h1>
+        <p class="hero__lead text-muted">Questions, volunteering, partnerships or media requests — we'd love to hear from you.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container grid grid--2 grid--align-start">
+        <div data-reveal>
+          <div class="callout mb-6">
+            <h3>Not a crisis line</h3>
+            <p>This form is for general inquiries. If you're in immediate danger or need urgent support, please visit our <a href="get-help.html">Get Help</a> page instead of waiting for a reply here.</p>
+          </div>
+
+          <form data-contact-form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
+            <!-- Honeypot: Formspree silently discards submissions where this hidden field is filled -->
+            <div class="form-honeypot" aria-hidden="true">
+              <label for="_gotcha">Leave this field empty</label>
+              <input type="text" id="_gotcha" name="_gotcha" tabindex="-1" autocomplete="off" />
+            </div>
+
+            <div class="form-field">
+              <label for="name">Full name</label>
+              <input type="text" id="name" name="name" required autocomplete="name" />
+            </div>
+
+            <div class="form-field">
+              <label for="email">Email address</label>
+              <input type="email" id="email" name="email" required autocomplete="email" />
+            </div>
+
+            <div class="form-field">
+              <label for="reason">Reason for contacting us</label>
+              <select id="reason" name="reason">
+                <option value="General inquiry">General inquiry</option>
+                <option value="Volunteering">Volunteering</option>
+                <option value="Partnership">Partnership</option>
+                <option value="Media / Press">Media / Press</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn--primary btn--block" data-default-label="Send message">Send message</button>
+
+            <div class="form-status" data-form-status role="status" aria-live="polite"></div>
+          </form>
+
+          <p class="placeholder-note mt-4">
+            TODO: replace <code>YOUR_FORM_ID</code> in this page's form action with your real Formspree
+            endpoint once your domain email (e.g. info@yourdomain.org) is set up. See README.md for steps.
+          </p>
+        </div>
+
+        <div data-reveal>
+          <div class="card">
+            <h3>Other ways to reach us</h3>
+            <p><strong>Email:</strong> <span class="placeholder-note">info@[yourdomain].org (TBD)</span></p>
+            <p><strong>Location:</strong> <span class="placeholder-note">Kampala, Uganda (TBD)</span></p>
+            <p><strong>Social media:</strong> <span class="placeholder-note">links coming soon</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script type="module" src="assets/js/main.js"></script>
+</body>
+</html>
