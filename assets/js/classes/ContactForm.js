@@ -30,7 +30,7 @@ export class ContactForm {
     if (endpoint.includes("YOUR_FORM_ID")) {
       this.#setStatus(
         "error",
-        "This form isn't connected yet — add your Formspree endpoint in contact.html (see README.md)."
+        "This form isn't connected yet. Add your Formspree endpoint in contact.html (see README.md)."
       );
       return;
     }
@@ -45,13 +45,13 @@ export class ContactForm {
       });
 
       if (response.ok) {
-        this.#setStatus("success", "Thank you — your message has been sent. We'll respond as soon as we can.");
+        this.#setStatus("success", "Thank you. Your message has been sent. We'll respond as soon as we can.");
         this.form.reset();
       } else {
         this.#setStatus("error", "Something went wrong sending your message. Please try again in a moment.");
       }
     } catch {
-      this.#setStatus("error", "Network error — please check your connection and try again.");
+      this.#setStatus("error", "Network error. Please check your connection and try again.");
     } finally {
       this.#setLoading(false);
     }

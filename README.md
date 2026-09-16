@@ -1,4 +1,4 @@
-# Malaq Impact Initiative — Website
+# Malaq Impact Initiative: Website
 
 A static, multi-page website for Malaq Impact Initiative, an NGO working to end
 technology-facilitated gender-based violence (TFGBV) in Uganda.
@@ -56,9 +56,9 @@ Then open `http://localhost:8000`.
 Search the codebase for `TODO` / `[TODO` / `placeholder-note` to find every
 spot marked for your input. In summary:
 
-1. **Images** — every `.img-placeholder` box is a labeled empty slot. Replace
+1. **Images**: every `.img-placeholder` box is a labeled empty slot. Replace
    it with an `<img>` tag once you have real photos/graphics.
-2. **Contact form endpoint** (`contact.html`) — currently points to
+2. **Contact form endpoint** (`contact.html`): currently points to
    `https://formspree.io/f/YOUR_FORM_ID`. Once you have your domain email
    (e.g. `info@yourdomain.org`):
    1. Create a free account at [formspree.io](https://formspree.io).
@@ -67,15 +67,15 @@ spot marked for your input. In summary:
       `action="..."` attribute of the `<form data-contact-form>` in
       `contact.html`.
    4. Spam protection is already wired up via Formspree's built-in honeypot
-      (the hidden `_gotcha` field) — no extra setup needed.
-3. **Get Help hotlines** (`get-help.html`) — placeholder boxes for the
+      (the hidden `_gotcha` field), so no extra setup is needed.
+3. **Get Help hotlines** (`get-help.html`): placeholder boxes for the
    national GBV helpline, police contact, legal aid and counselling services.
    Please verify these with a live source before publishing.
-4. **Contact/footer details** — email and location are marked "(TBD)" in
+4. **Contact/footer details**: email and location are marked "(TBD)" in
    `partials/footer.html` and `contact.html`.
-5. **Social media links** — placeholder `#` links in `partials/footer.html`.
-6. **Team section** (`about.html`) — placeholder cards, ready for names/photos.
-7. **Homepage statistics** — placeholder `[X]%` figures; replace with real,
+5. **Social media links**: placeholder `#` links in `partials/footer.html`.
+6. **Team section** (`about.html`): placeholder cards, ready for names/photos.
+7. **Homepage statistics**: placeholder `[X]%` figures, replace with real,
    sourced numbers (and consider citing the source).
 
 ## Attaching your custom domain
@@ -86,7 +86,7 @@ spot marked for your input. In summary:
    ```
    www.malaqimpact.org
    ```
-3. In GitHub → repo **Settings → Pages**, add the same custom domain and
+3. In GitHub, under repo **Settings > Pages**, add the same custom domain and
    enable "Enforce HTTPS" once it's available (GitHub provisions a free TLS
    certificate automatically).
 4. At your domain registrar, point the domain at GitHub Pages:
@@ -94,6 +94,11 @@ spot marked for your input. In summary:
      GitHub's Pages IPs (listed in GitHub's Pages custom-domain docs).
    - For a `www` subdomain: add a `CNAME` record pointing to
      `<your-github-username>.github.io`.
+
+Note: this GitHub account already has an account-wide custom domain
+(`allans.engineer`) configured, which auto-redirects Pages sites on this
+account. Adding this project's own `CNAME` file will override that redirect
+for this repo specifically once you're ready to use the NGO's real domain.
 
 ## Security notes
 
@@ -103,13 +108,15 @@ spot marked for your input. In summary:
   this meta-tag CSP is the strongest option available without moving to a
   platform like Cloudflare Pages or Netlify (which support a `_headers` file
   for additional headers like `X-Frame-Options`).
-- No inline `<script>`/`onclick=` handlers anywhere — all JS is in external
-  files using `addEventListener`, reducing XSS risk.
+- No inline `<script>`/`onclick=` handlers anywhere, and no inline `style=`
+  attributes either (the CSP has no `unsafe-inline`). All JS is in external
+  files using `addEventListener`, and all styling is in CSS classes, which
+  reduces XSS risk.
 - The contact form is spam-protected with Formspree's honeypot field and
   validated client-side, and Formspree itself enforces its own server-side
   protections and submission limits.
-- No analytics/tracking scripts and no database — nothing to be breached
-  beyond the static files themselves.
+- No analytics/tracking scripts and no database, so there's nothing to be
+  breached beyond the static files themselves.
 - All external links use `rel="noopener noreferrer"`.
 
 ## The "Quick Exit" safety feature
@@ -124,8 +131,8 @@ GBV-support websites. You can change the destination URL by editing
 ## Deploying to GitHub Pages
 
 1. Push this repository to GitHub (public repo, so Pages is free).
-2. Go to **Settings → Pages**.
+2. Go to **Settings > Pages**.
 3. Under "Build and deployment", set **Source** to `Deploy from a branch`,
    branch `main`, folder `/ (root)`.
-4. Save — your site will be live at
+4. Save. Your site will be live at
    `https://<username>.github.io/<repo-name>/` within a minute or two.
