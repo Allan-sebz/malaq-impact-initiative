@@ -3605,6 +3605,17 @@ p:last-child {
   color: var(--ink-3);
 }
 
+.stat__source a {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: color 0.2s ease;
+}
+
+.stat__source a:hover {
+  color: var(--teal-300);
+}
+
 .stats--4 {
   gap: 2rem;
 }

@@ -99,11 +99,15 @@ marked for your input. In summary:
    card. Verify each with a live source before publishing.
 5. **Contact channels** (`contact.html`): get help, general, partnerships and
    media addresses (shown as `+256 XXX XXX XXX` and `...@[yourdomain].org`).
-6. **Figures shown as XX** (`index.html`, `the-issue.html`, `our-work.html`):
-   Uganda statistics and impact figures. Replace the number, label and
-   "Source" line together, using only verified data. To animate a number,
-   add `data-count="68" data-suffix="%"` to its `.stat__num` and remove the
+6. **Impact figures shown as XX** (`index.html`, `our-work.html`): Malaq's own
+   programme results (people reached, survivors supported, sessions, outputs).
+   Replace them only with verified figures. To animate a number, add
+   `data-count="68" data-suffix="%"` to its `.stat__num` and remove the
    `stat__num--pending` class.
+
+   The Uganda statistics are already filled in with sourced figures (Pollicy
+   2020, DataReportal Digital 2026, GSMA Mobile Gender Gap Report 2026). Review
+   them each year and update the number, label and source link together.
 7. **Team and governance** (`team.html`): leadership photos, names, roles and
    biographies; board and advisors (remove that section if not applicable).
 8. **Safeguarding** (`safeguarding.html`): link each policy PDF once approved,
