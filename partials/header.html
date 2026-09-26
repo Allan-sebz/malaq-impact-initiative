@@ -14,12 +14,36 @@
 
     <nav class="nav" aria-label="Primary">
       <ul class="nav__list">
-        <li><a class="nav__link" href="index.html">Home</a></li>
-        <li><a class="nav__link" href="about.html">About</a></li>
+        <li class="nav__item--has-menu">
+          <button type="button" class="nav__link nav__trigger" aria-expanded="false" aria-controls="menu-about">
+            About
+            <svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#chevron-down"></use></svg>
+          </button>
+          <ul class="nav__menu" id="menu-about">
+            <li>
+              <a class="nav__menu-link" href="about.html">
+                <span class="icon-badge"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#target"></use></svg></span>
+                <span><span class="nav__menu-title">Who we are</span><span class="nav__menu-desc">Our mission, vision and focus</span></span>
+              </a>
+            </li>
+            <li>
+              <a class="nav__menu-link" href="team.html">
+                <span class="icon-badge"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#users"></use></svg></span>
+                <span><span class="nav__menu-title">Team and governance</span><span class="nav__menu-desc">Leadership, board and values</span></span>
+              </a>
+            </li>
+            <li>
+              <a class="nav__menu-link" href="safeguarding.html">
+                <span class="icon-badge"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#shield-check"></use></svg></span>
+                <span><span class="nav__menu-title">Safeguarding</span><span class="nav__menu-desc">How we protect the people we serve</span></span>
+              </a>
+            </li>
+          </ul>
+        </li>
         <li><a class="nav__link" href="the-issue.html">The Issue</a></li>
-        <li><a class="nav__link" href="digital-safety.html">Digital Safety</a></li>
+        <li><a class="nav__link" href="our-work.html">Our Work</a></li>
+        <li><a class="nav__link" href="resources.html">Resources</a></li>
         <li><a class="nav__link" href="get-involved.html">Get Involved</a></li>
-        <li><a class="nav__link" href="news.html">News</a></li>
         <li><a class="nav__link" href="contact.html">Contact</a></li>
       </ul>
     </nav>
@@ -42,15 +66,23 @@
       <nav aria-label="Mobile">
         <ul class="mobile-menu__list">
           <li><a class="mobile-menu__link" href="index.html">Home</a></li>
+          <li><a class="mobile-menu__link" href="get-help.html">Get Help</a></li>
           <li><a class="mobile-menu__link" href="about.html">About</a></li>
           <li><a class="mobile-menu__link" href="the-issue.html">The Issue</a></li>
-          <li><a class="mobile-menu__link" href="get-help.html">Get Help</a></li>
-          <li><a class="mobile-menu__link" href="digital-safety.html">Digital Safety</a></li>
+          <li><a class="mobile-menu__link" href="our-work.html">Our Work</a></li>
+          <li><a class="mobile-menu__link" href="resources.html">Resources</a></li>
           <li><a class="mobile-menu__link" href="get-involved.html">Get Involved</a></li>
-          <li><a class="mobile-menu__link" href="news.html">News</a></li>
           <li><a class="mobile-menu__link" href="contact.html">Contact</a></li>
         </ul>
       </nav>
+
+      <ul class="mobile-menu__more" aria-label="More pages">
+        <li><a class="mobile-menu__chip" href="team.html">Team and governance</a></li>
+        <li><a class="mobile-menu__chip" href="safeguarding.html">Safeguarding</a></li>
+        <li><a class="mobile-menu__chip" href="digital-safety.html">Digital safety</a></li>
+        <li><a class="mobile-menu__chip" href="news.html">News</a></li>
+        <li><a class="mobile-menu__chip" href="privacy.html">Privacy</a></li>
+      </ul>
 
       <div class="mobile-menu__foot">
         <p class="mobile-menu__title">Need support right now?</p>

@@ -9,14 +9,20 @@ database) so it can be hosted directly on GitHub Pages.
 ## Project structure
 
 ```
-index.html              Home
-about.html              Mission, vision, pillars, values, team
-the-issue.html          What TFGBV is, ten forms, impact
-get-help.html           Emergency card, support services, next steps, safe browsing
+index.html              Home: hero, issue, 10 forms, why Uganda, approach,
+                        programmes, survivors, impact, resources, partners
+about.html              Who we are, mission, vision, who we work with
+team.html               Leadership, board and advisors, values
+safeguarding.html       Safeguarding commitments, policies, raising a concern
+the-issue.html          Definition, the 10 forms, why Uganda, harm
+our-work.html           Three pillars, five programme areas, impact
+resources.html          Filterable resource library
+get-help.html           Emergency card, Malaq support channels, other services,
+                        next steps, safe browsing
 digital-safety.html     Tabbed safety guides and an interactive safety check
-get-involved.html       Volunteer, partner, support
+get-involved.html       Five audience paths, partnerships, awareness
 news.html               News and stories (placeholders)
-contact.html            Contact form (Formspree)
+contact.html            Contact channels and general enquiry form (Formspree)
 privacy.html            Privacy policy with a live table of contents
 404.html                Not found page
 
@@ -30,8 +36,9 @@ assets/
   js/boot.js            Tiny script that enables JS-only styles before paint
   js/main.js            App entry point
   js/classes/           One class per behaviour: PartialLoader, Navigation,
-                        QuickExit, RevealOnScroll, CounterGroup, Accordion,
-                        Tabs, SafetyChecklist, ScrollSpy, BackToTop, ContactForm
+                        Dropdown, QuickExit, RevealOnScroll, CounterGroup,
+                        Accordion, Tabs, SafetyChecklist, ScrollSpy, BackToTop,
+                        ContactForm, ResourceFilter
   favicon.svg
 ```
 
@@ -85,19 +92,31 @@ marked for your input. In summary:
       `contact.html`.
    4. Spam protection is already wired up via Formspree's built-in honeypot
       (the hidden `_gotcha` field), so no extra setup is needed.
-3. **Get Help hotlines** (`get-help.html`): placeholder boxes for the
-   national GBV helpline, police contact, legal aid and counselling services.
-   Please verify these with a live source before publishing.
-   The emergency number in the red card at the top also needs adding.
-4. **Contact details**: email is marked "coming soon" in
-   `partials/footer.html` and `contact.html`.
-5. **Social media links**: placeholder `#` links in `partials/footer.html`.
-6. **Team section** (`about.html`): placeholder cards, ready for names/photos.
-7. **Homepage figures**: the animated numbers currently show real facts from
-   the site (10 forms, 5 stakeholder groups, 3 pillars). When you have sourced
-   impact data, change the text and the `data-count` value together.
-8. **Donations** (`get-involved.html`): link the button to a giving page once
-   one exists.
+3. **Malaq support channels** (`get-help.html`, "How Malaq can help"): phone,
+   WhatsApp, email and support hours. Only publish channels that are monitored.
+4. **Other support services** (`get-help.html`): national GBV helpline, police,
+   legal aid and counselling contacts, plus the emergency number in the red
+   card. Verify each with a live source before publishing.
+5. **Contact channels** (`contact.html`): get help, general, partnerships and
+   media addresses (shown as `+256 XXX XXX XXX` and `...@[yourdomain].org`).
+6. **Figures shown as XX** (`index.html`, `the-issue.html`, `our-work.html`):
+   Uganda statistics and impact figures. Replace the number, label and
+   "Source" line together, using only verified data. To animate a number,
+   add `data-count="68" data-suffix="%"` to its `.stat__num` and remove the
+   `stat__num--pending` class.
+7. **Team and governance** (`team.html`): leadership photos, names, roles and
+   biographies; board and advisors (remove that section if not applicable).
+8. **Safeguarding** (`safeguarding.html`): link each policy PDF once approved,
+   and add the safeguarding contact email and phone.
+9. **Partner logos** (`index.html`, `get-involved.html`): replace the
+   placeholders with confirmed partners only.
+10. **Resources** (`resources.html`): replace the "Coming soon" cards with real
+    documents. Instructions are in a comment at the top of the library.
+11. **Social media links**: placeholder `#` links in `partials/footer.html`.
+12. **Donations** (`get-involved.html`, funders card): link to a giving page
+    once one exists.
+13. **Mission and vision** (`about.html`): confirm the final wording with
+    leadership.
 
 ## Attaching your custom domain
 

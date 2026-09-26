@@ -6,11 +6,11 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://formspree.io; form-action 'self' https://formspree.io; base-uri 'self'; object-src 'none'; upgrade-insecure-requests" />
   <meta name="referrer" content="strict-origin-when-cross-origin" />
   <title>Contact Us | Malaq Impact Initiative</title>
-  <meta name="description" content="Get in touch with Malaq Impact Initiative about general enquiries, volunteering, partnerships or media requests." />
+  <meta name="description" content="Connect with Malaq Impact Initiative: general enquiries, partnerships, media and support channels." />
   <meta name="theme-color" content="#1e1029" />
   <meta property="og:site_name" content="Malaq Impact Initiative" />
-  <meta property="og:title" content="Contact | Malaq Impact Initiative" />
-  <meta property="og:description" content="General enquiries, volunteering, partnerships and media." />
+  <meta property="og:title" content="Connect with Malaq" />
+  <meta property="og:description" content="General enquiries, partnerships, media and support." />
   <meta property="og:type" content="website" />
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -31,39 +31,72 @@
           <li><a class="breadcrumb__link" href="index.html">Home</a></li>
           <li aria-current="page">Contact</li>
         </ol>
-        <h1 class="page-hero__title" data-reveal data-reveal-delay="1">Let's <em>talk</em></h1>
+        <h1 class="page-hero__title" data-reveal data-reveal-delay="1">Connect with <em>Malaq</em></h1>
         <p class="page-hero__lead" data-reveal data-reveal-delay="2">
-          Questions, volunteering, partnerships or media requests: we would love to hear from you.
+          Choose the right channel below so your message reaches the right person quickly.
         </p>
       </div>
     </section>
 
+    <!-- Channels -->
     <section class="section">
+      <div class="container">
+        <!-- TODO: replace each placeholder with the organisation's real contact details once the domain is set up. -->
+        <div class="grid grid--4">
+          <article class="card channel channel--highlight" data-reveal>
+            <span class="icon-badge icon-badge--light"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#life-buoy"></use></svg></span>
+            <h3>Get help</h3>
+            <p class="channel__label">Phone or WhatsApp</p>
+            <p class="channel__value channel__value--pending">+256 XXX XXX XXX</p>
+            <p><a class="link-arrow link-arrow--light" href="get-help.html">All support options <svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#arrow-right"></use></svg></a></p>
+          </article>
+          <article class="card channel" data-reveal data-reveal-delay="1">
+            <span class="icon-badge"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#mail"></use></svg></span>
+            <h3>General enquiries</h3>
+            <p class="channel__label">Email</p>
+            <p class="channel__value channel__value--pending">info@[yourdomain].org</p>
+            <p>Or use the form below.</p>
+          </article>
+          <article class="card channel" data-reveal data-reveal-delay="2">
+            <span class="icon-badge icon-badge--teal"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#landmark"></use></svg></span>
+            <h3>Partnerships</h3>
+            <p class="channel__label">Email</p>
+            <p class="channel__value channel__value--pending">partnerships@[yourdomain].org</p>
+            <p>Programmes, research and funding.</p>
+          </article>
+          <article class="card channel" data-reveal data-reveal-delay="3">
+            <span class="icon-badge"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#mic"></use></svg></span>
+            <h3>Media</h3>
+            <p class="channel__label">Email</p>
+            <p class="channel__value channel__value--pending">media@[yourdomain].org</p>
+            <p>Press and interview requests.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Form -->
+    <section class="section section--white">
       <div class="container split split--top split--wide-right">
         <div data-reveal>
-          <p class="label">Get in touch</p>
-          <h2>How to reach us</h2>
-          <p class="lead">Send us a message using the form and a member of our team will get back to you.</p>
+          <p class="label">Send a message</p>
+          <h2>General enquiries</h2>
+          <p class="lead">Use this form for questions, volunteering, partnerships or media requests and a member of our team will get back to you.</p>
 
-          <!-- TODO: add the organisation email and confirm the location once available. -->
           <ul class="info-list">
-            <li class="info-item">
-              <span class="icon-badge icon-badge--sm"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#mail"></use></svg></span>
-              <span><span class="info-item__label">Email</span><span class="info-item__value">Coming soon</span></span>
-            </li>
             <li class="info-item">
               <span class="icon-badge icon-badge--sm"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#map-pin"></use></svg></span>
               <span><span class="info-item__label">Location</span><span class="info-item__value">Uganda</span></span>
             </li>
             <li class="info-item">
               <span class="icon-badge icon-badge--sm"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#share"></use></svg></span>
-              <span><span class="info-item__label">Social media</span><span class="info-item__value">Links coming soon</span></span>
+              <span><span class="info-item__label">Social media</span><span class="info-item__value">Links in the footer</span></span>
             </li>
           </ul>
 
           <div class="notice">
             <span class="icon-badge icon-badge--sm"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#info"></use></svg></span>
-            <p><strong>This form is not a crisis line.</strong> If you are in danger or need urgent support, please visit <a href="get-help.html">Get help</a> instead of waiting for a reply.</p>
+            <p><strong>Please do not share details of abuse in this form.</strong> If you need support, use the Get help channels above or visit <a href="get-help.html">Get help</a>. If you are in danger, contact emergency services.</p>
           </div>
         </div>
 
@@ -98,6 +131,7 @@
                     <option>General enquiry</option>
                     <option>Volunteering</option>
                     <option>Partnership</option>
+                    <option>Research collaboration</option>
                     <option>Supporting our work</option>
                     <option>Media and press</option>
                     <option>Something else</option>

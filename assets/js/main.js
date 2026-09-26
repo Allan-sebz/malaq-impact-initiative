@@ -1,5 +1,6 @@
 import { PartialLoader } from "./classes/PartialLoader.js";
 import { Navigation } from "./classes/Navigation.js";
+import { Dropdown } from "./classes/Dropdown.js";
 import { QuickExit } from "./classes/QuickExit.js";
 import { RevealOnScroll } from "./classes/RevealOnScroll.js";
 import { Accordion } from "./classes/Accordion.js";
@@ -9,6 +10,7 @@ import { CounterGroup } from "./classes/CounterGroup.js";
 import { ScrollSpy } from "./classes/ScrollSpy.js";
 import { BackToTop } from "./classes/BackToTop.js";
 import { ContactForm } from "./classes/ContactForm.js";
+import { ResourceFilter } from "./classes/ResourceFilter.js";
 
 /**
  * App
@@ -26,6 +28,7 @@ class App {
     ]).loadAll();
 
     new Navigation(document).init();
+    document.querySelectorAll(".nav__item--has-menu").forEach((el) => new Dropdown(el).init());
     new BackToTop(document.querySelector("[data-back-to-top]")).init();
     this.#setCurrentYear();
   }
@@ -39,6 +42,7 @@ class App {
     document.querySelectorAll("[data-safety-check]").forEach((el) => new SafetyChecklist(el).init());
     document.querySelectorAll("[data-scrollspy]").forEach((el) => new ScrollSpy(el).init());
     document.querySelectorAll("[data-contact-form]").forEach((el) => new ContactForm(el).init());
+    document.querySelectorAll("[data-resource-filter]").forEach((el) => new ResourceFilter(el).init());
   }
 
   #setCurrentYear() {

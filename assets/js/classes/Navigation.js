@@ -95,8 +95,18 @@ export class Navigation {
 
   #markActiveLinks() {
     const currentPage = window.location.pathname.split("/").pop() || "index.html";
-    this.header.querySelectorAll(".nav__link, .mobile-menu__link").forEach((link) => {
+    const links = document.querySelectorAll(".nav__link, .nav__menu-link, .mobile-menu__link, .mobile-menu__chip");
+
+    links.forEach((link) => {
       if (link.getAttribute("href") === currentPage) link.setAttribute("aria-current", "page");
     });
+
+    this.header.querySelectorAll(".nav__item--has-menu").forEach((item) => {
+      const hasCurrent = item.querySelector('.nav__menu-link[aria-current="page"]');
+      item.querySelector(".nav__trigger")?.classList.toggle("is-active", Boolean(hasCurrent));
+    });
+
+    const helpFab = document.querySelector("[data-help-fab]");
+    if (helpFab && currentPage === "get-help.html") helpFab.hidden = true;
   }
 }

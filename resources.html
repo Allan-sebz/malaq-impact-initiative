@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://formspree.io; form-action 'self' https://formspree.io; base-uri 'self'; object-src 'none'; upgrade-insecure-requests" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <title>Knowledge and Resources | Malaq Impact Initiative</title>
+  <meta name="description" content="Research, policy briefs, digital safety guides, survivor resources and training materials on technology-facilitated gender-based violence in Uganda." />
+  <meta name="theme-color" content="#1e1029" />
+  <meta property="og:site_name" content="Malaq Impact Initiative" />
+  <meta property="og:title" content="Knowledge and resources | Malaq Impact Initiative" />
+  <meta property="og:description" content="Evidence and practical resources on technology-facilitated gender-based violence." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Manrope:wght@400;500;600;700;800&display=swap" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <script src="assets/js/boot.js"></script>
+  <script type="module" src="assets/js/main.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <div id="site-header"></div>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <ol class="breadcrumb" data-reveal>
+          <li><a class="breadcrumb__link" href="index.html">Home</a></li>
+          <li aria-current="page">Resources</li>
+        </ol>
+        <h1 class="page-hero__title" data-reveal data-reveal-delay="1">Knowledge and <em>resources</em></h1>
+        <p class="page-hero__lead" data-reveal data-reveal-delay="2">
+          Evidence and practical resources to understand, prevent and respond to technology-facilitated gender-based violence.
+        </p>
+      </div>
+    </section>
+
+    <!--
+      To add a resource: copy one <article> or <a> card below, set data-category to one
+      or more of: research policy guides survivors training publications
+      and link to the page or PDF (store PDFs in assets/docs/).
+    -->
+    <section class="section" data-resource-filter>
+      <div class="container">
+        <ul class="filter-bar" aria-label="Filter resources by category">
+          <li><button type="button" class="filter-chip" data-filter="all" aria-pressed="true">All</button></li>
+          <li><button type="button" class="filter-chip" data-filter="research" aria-pressed="false">Research and reports</button></li>
+          <li><button type="button" class="filter-chip" data-filter="policy" aria-pressed="false">Policy briefs</button></li>
+          <li><button type="button" class="filter-chip" data-filter="guides" aria-pressed="false">Digital safety guides</button></li>
+          <li><button type="button" class="filter-chip" data-filter="survivors" aria-pressed="false">Survivor resources</button></li>
+          <li><button type="button" class="filter-chip" data-filter="training" aria-pressed="false">Training materials</button></li>
+          <li><button type="button" class="filter-chip" data-filter="publications" aria-pressed="false">Publications</button></li>
+        </ul>
+        <p class="filter-count" data-filter-count aria-live="polite"></p>
+
+        <div class="grid grid--3">
+          <a class="resource-card" href="digital-safety.html" data-category="guides">
+            <div class="resource-card__top">
+              <span class="icon-badge"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#lock"></use></svg></span>
+              <span class="badge">Guide</span>
+            </div>
+            <h3>Digital safety guides</h3>
+            <p>Step-by-step guidance on accounts, privacy, devices, deepfakes, evidence and scams, with a quick self-check.</p>
+            <div class="resource-card__foot"><span>Web guide</span><span class="link-arrow">Open <svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#arrow-right"></use></svg></span></div>
+          </a>
+
+          <a class="resource-card" href="the-issue.html" data-category="guides publications">
+            <div class="resource-card__top">
+              <span class="icon-badge icon-badge--teal"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#book-open"></use></svg></span>
+              <span class="badge">Explainer</span>
+            </div>
+            <h3>Understanding TFGBV</h3>
+            <p>What technology-facilitated gender-based violence is, the ten forms it takes and the warning signs to look for.</p>
+            <div class="resource-card__foot"><span>Web explainer</span><span class="link-arrow">Open <svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#arrow-right"></use></svg></span></div>
+          </a>
+
+          <a class="resource-card" href="get-help.html#next-steps" data-category="survivors">
+            <div class="resource-card__top">
+              <span class="icon-badge"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#life-buoy"></use></svg></span>
+              <span class="badge">Survivors</span>
+            </div>
+            <h3>What to do if you are targeted</h3>
+            <p>Five practical steps: staying safe, saving evidence, not engaging, reporting and reaching out for support.</p>
+            <div class="resource-card__foot"><span>Web guide</span><span class="link-arrow">Open <svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#arrow-right"></use></svg></span></div>
+          </a>
+
+          <a class="resource-card" href="get-help.html#browse-safely" data-category="survivors guides">
+            <div class="resource-card__top">
+              <span class="icon-badge icon-badge--teal"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#eye-off"></use></svg></span>
+              <span class="badge">Survivors</span>
+            </div>
+            <h3>Browsing safely</h3>
+            <p>How to look for help without leaving traces on a device someone else may check.</p>
+            <div class="resource-card__foot"><span>Web guide</span><span class="link-arrow">Open <svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#arrow-right"></use></svg></span></div>
+          </a>
+
+          <!-- TODO: replace the placeholder cards below with real documents as they are published. -->
+          <article class="resource-card" data-category="research publications">
+            <div class="resource-card__top">
+              <span class="icon-badge"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#bar-chart"></use></svg></span>
+              <span class="badge badge--muted">Coming soon</span>
+            </div>
+            <h3>Research report title</h3>
+            <p>A summary of findings on technology-facilitated gender-based violence in Uganda will appear here.</p>
+            <div class="resource-card__foot"><span>PDF · to be published</span></div>
+          </article>
+
+          <article class="resource-card" data-category="policy">
+            <div class="resource-card__top">
+              <span class="icon-badge icon-badge--teal"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#landmark"></use></svg></span>
+              <span class="badge badge--muted">Coming soon</span>
+            </div>
+            <h3>Policy brief title</h3>
+            <p>Recommendations for policymakers and institutions on preventing and responding to TFGBV.</p>
+            <div class="resource-card__foot"><span>PDF · to be published</span></div>
+          </article>
+
+          <article class="resource-card" data-category="training">
+            <div class="resource-card__top">
+              <span class="icon-badge"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#users"></use></svg></span>
+              <span class="badge badge--muted">Coming soon</span>
+            </div>
+            <h3>Digital safety training toolkit</h3>
+            <p>Session plans and materials for community facilitators, schools and partner organisations.</p>
+            <div class="resource-card__foot"><span>Toolkit · to be published</span></div>
+          </article>
+
+          <article class="resource-card" data-category="survivors">
+            <div class="resource-card__top">
+              <span class="icon-badge icon-badge--teal"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#file-text"></use></svg></span>
+              <span class="badge badge--muted">Coming soon</span>
+            </div>
+            <h3>Evidence log template</h3>
+            <p>A simple, printable template for recording incidents safely to support reporting.</p>
+            <div class="resource-card__foot"><span>PDF · to be published</span></div>
+          </article>
+
+          <article class="resource-card" data-category="publications">
+            <div class="resource-card__top">
+              <span class="icon-badge"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#layers"></use></svg></span>
+              <span class="badge badge--muted">Coming soon</span>
+            </div>
+            <h3>TFGBV publication title</h3>
+            <p>Articles, factsheets and other publications from Malaq and its partners.</p>
+            <div class="resource-card__foot"><span>Publication · to be published</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- News teaser -->
+    <section class="section section--tight section--white">
+      <div class="container">
+        <div class="notice" data-reveal>
+          <span class="icon-badge icon-badge--sm"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#calendar"></use></svg></span>
+          <p><strong>Looking for updates?</strong> Campaign news, research highlights and stories of change are published in <a href="news.html">news and stories</a>.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+</body>
+</html>
